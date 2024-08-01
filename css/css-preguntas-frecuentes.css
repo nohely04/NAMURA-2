@@ -1,0 +1,66 @@
+.encabezado-acordeon {
+    background: #dd7888;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: 'Montserrat Light';
+    padding: 5px; 
+    margin-bottom: 15px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.encabezado-acordeon .accordion-button {
+    color: white;
+    background-color: #dd7888;
+    border: none;
+    border-radius: 10px; 
+    width: 100%;
+}
+
+#titulo-pregunta{
+    text-align: center; 
+    justify-content: center;
+}
+
+/* Ajuste adicional para el botón cuando está colapsado */
+.encabezado-acordeon .accordion-button.collapsed {
+    color: white;
+    text-align: center; 
+    justify-content: center;
+     
+}
+.accordion-item {
+    border: none; 
+}
+.encabezado-acordeon .accordion-button:focus,
+.encabezado-acordeon .accordion-button:active {
+    outline: none; /* Elimina el contorno */
+    box-shadow: none; /* Elimina las sombras */
+    background-color: #dd7888; 
+}
+
+/* Elimina el color azul cuando el botón está colapsado y enfocado */
+.encabezado-acordeon .accordion-button.collapsed:focus,
+.encabezado-acordeon .accordion-button.collapsed:active {
+    background-color: #dd7888;
+}
+
+.accordion-body {
+    text-align: center; 
+}
+
+.accordion-body ul {
+    
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+.accordion-body li {
+    margin-bottom: 10px; 
+}

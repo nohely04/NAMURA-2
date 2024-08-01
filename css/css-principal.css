@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'League';
+    src: url('../fonts/LeagueGothic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eyesome Scrip';
+    src: url('../fonts/Eyesome\ Script.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*Encabezado*/
+header {
+    background-color: #FCBFC9;
+    text-align: center;
+    padding: 10px;
+    padding-left: 50px;
+    size-adjust: 20px;
+    font-family: League;
+    color: #dd7888;
+    position: relative;
+}
+
+header figure {
+    position: absolute;
+    left: 10px;
+    top: -15px;
+}
+
+header h1 {
+    text-align: center;
+    align-items: center;
+}
+
+/*Menú*/
+#menú {
+    top:-10px;
+    background-color: #FCBFC9 !important;
+}
+
+.nav-item a {
+    color: white
+}
+
+.nav-item a:hover {
+    color: #dd7888
+}
+/*Fijar fondo de letra*/
+h2 {
+    font-family: 'Eyesome Scrip';
+}
+
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    font-family: 'Montserrat Light';
+}
+
+footer {
+    background-color: #FCBFC9;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    padding: 20px;
+    background-color: #FCBFC9;
+}
+
+.iconos-redes a {
+    font-size: 15px; 
+    color: white ; 
+    text-decoration: none; 
+}
+.iconos-redes a:hover {
+    color: white; 
+}
+
+/*CSS DE LOS TITULOS QUE USAN TODAS LAS PÁGINAS*/
+.titulo{
+    text-align: center;
+    font-family: Eyesome Scrip;
+    font-size: 65px;
+    padding-top: 50px;
+}
+#subtitulo {
+    font-size: 25px;
+    margin: 70px;
+    text-align: center;
+}

@@ -1,0 +1,34 @@
+#listaProductos,.mb-3{
+    padding: 50px;
+}
+
+div img{
+    height: 290PX;
+
+}
+
+.form-select option, label{
+    font-family: 'Montserrat Light';
+}
+
+.detalle {
+font-family: 'League';
+background-color: #dd7888;
+border: #dd7888;
+align-items: center;
+justify-content: center;
+margin-left: 50px;
+}
+
+.detalle:hover,
+.detalle:focus {
+    text-decoration: none; 
+    background-color: #dd7888; 
+    color: white;
+}
+
+
+.card-title {
+    font-weight: bold; /* Aplica negrita al texto */
+}
+
