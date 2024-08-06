@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es ">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <title>Términos y Condiciones</title>
     <!--íconos y link de bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="./css/css-principal.css" rel="stylesheet" />
-    <link href="./css/css-productos.css" rel="stylesheet" />
+    <link href="./css/css-terminos-condiciones.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
@@ -54,36 +56,42 @@
             </div>
         </div>
     </nav>
-
     <main>
-
         <section>
             <article>
-                <h2 class="titulo">Productos</h2>
+                <h2 class="titulo">Términos y Condiciones</h2>
+                <p id="subtitulo">Bienvenido a NAMURA. Estos términos y condiciones rigen el uso de nuestros servicios
+                    y la compra de productos. Al realizar un pedido con nosotros, usted como cliente, acepta totalmente
+                    estos términos. Lea atentamente estos términos antes de realizar su pedido.</p>
+                
             </article>
         </section>
-        <div class="mb-3">
-            <label for="filter">Buscar por categoría:</label>
-            <select id="filter" class="form-select">
-                <option value="all">Todos</option>
-            </select>
-        </div>
-        <div id="listaProductos" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card" style="width: 200px;height: 450px">
-                    <img src="img/image-not-found.jpg" class="card-img-top" alt="Imagen">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Título</b></h5>
-                        <h6 class="card-text">Desde: &cent;0</h6>
-                        <div>
-                            <Button type="button" class="btn btn-lg btn-primary detalle"> Detalle </Button>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <section id="texto">
+            <article>
+                <h5><b>Pedidos</b></h5>
+                <ul>
+                    <li>Realizar pedidos: En NAMURA puedes realizar tus pedidos, ya sean por medio de la página web o
+                        contactándonos por medio de nuestro WhatsApp.</li>
+                    <li>Confirmación del pedido: Una vez que realices nuestro pedido, nosotros nos vamos a comunicar con
+                        usted por mensaje para confirmar el pedido, acá podés notificarnos de cualquier error. </li>
+                    <li>Cancelación o cambio del pedido: Las cancelaciones o cambios del pedido deben de realizarse con mínimo
+                        48 horas antes de la fecha acordaba para la entrega. Los cambios pueden estár sujetos a cargos.</li>
+                </ul>
+            </article>
+        <article>
+            <h5><b>Métodos de pago</b></h5>
+            <ul>
+                <li>Tarjetas de crédito o débito: Únicamente aceptamos tarjeta cuando se realizan los pedidos desde la página web.</li>
+                <li>Efectivo o transferencia bancaria: En casos de ser pedidos realizados a nuestro WhatsApp, aceptamos tanto efectivo
+                    como tranferencias bancarias, como el Sinpe Móvil.</li>
+                <li>Pago anticipado: Algunos productos cuentan con un adelanto a la hora de hacer el pedido, este dinero no es reembolsable.</li>
+            </ul>
+        </article>
+        <article>
+            <h5><b>Devoluciones </b></h5>
+            <p>No aceptamos devoluciones a menos que hayamos cometido un error o el producto esté defectuoso.</p>
+        </article>
+        </section>
 
     </main>
     <footer>
@@ -98,10 +106,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="json/productos-detalle.js"></script>
-    <script src="js/productos.js"></script>
 
 </body>
 

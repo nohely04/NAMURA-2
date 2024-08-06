@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <!--íconos y link de bootstrap-->
+    <title>Garatias</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="./css/css-principal.css" rel="stylesheet" />
-    <link href="./css/css-productos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/css-principal.css">
+    <link rel="stylesheet" href="css/css-garantia.css">
 </head>
-
 <body>
     <!--Encabezado-->
     <header>
@@ -26,8 +23,7 @@
     <!--Menú-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menú">
         <div class="container-fluid justify-content-end">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -54,38 +50,43 @@
             </div>
         </div>
     </nav>
-
     <main>
-
         <section>
             <article>
-                <h2 class="titulo">Productos</h2>
+                <h2 class="titulo">Garantías</h2>
+                <p id="descripcion">En NAMURA, nos enorgullecemos de ofrecerte un sabor excepcional y un servicio de primera clase. Cada uno de nuestros productos es el resultado de una dedicación meticulosa a la calidad y la excelencia. Utilizamos solo los mejores ingredientes, 
+                    seleccionados con cuidado para garantizar que cada pastel, tarta y delicia que elaboramos cumpla con los más altos estándares.</p>
+                
             </article>
+            <section>
+                <article>
+                    <h5><b>Compromiso con la calidad:</b></h5>
+                    <p>Desde el primer bocado, puedes estar seguro de que estás disfrutando de un producto elaborado con los ingredientes más frescos y de la mejor calidad.
+                        Se técnicas artesanales y recetas refinadas para crear obras maestras que no solo son visualmente impresionantes, sino que también ofrecen un sabor inigualable.
+                    </p>
+                </article>
+                <article>
+                    <h5><b>Satisfacción del Cliente:</b></h5>
+                    <P> 
+                        Tú satisfacción es nuestra prioridad. Si en alguna ocasión no estás completamente satisfecho con uno de nuestros productos, te invitamos a contactarnos.
+                        Estamos aquí para resolver cualquier inconveniente que puedas tener y ofrecerte una solución que puede incluir un reemplazo o un reembolso.
+                        Queremos que cada experiencia con sea memorable y positiva.
+                        </P>
+                </article>
+                <article>
+                    <h5><B>Adaptabilidad y Atención Personalizada:</B></h5>
+                    <P>En NAMURA, estamos comprometidos a brindarte no solo productos de la más alta calidad, sino también un servicio que te haga sentir valorado y atendido. 
+                        Gracias por elegirnos para endulzar tus celebraciones y momentos especiales.</P>
+                </article>
+            </section>
+            
         </section>
-        <div class="mb-3">
-            <label for="filter">Buscar por categoría:</label>
-            <select id="filter" class="form-select">
-                <option value="all">Todos</option>
-            </select>
-        </div>
-        <div id="listaProductos" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card" style="width: 200px;height: 450px">
-                    <img src="img/image-not-found.jpg" class="card-img-top" alt="Imagen">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Título</b></h5>
-                        <h6 class="card-text">Desde: &cent;0</h6>
-                        <div>
-                            <Button type="button" class="btn btn-lg btn-primary detalle"> Detalle </Button>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
     </main>
+
+
+
+
+    
     <footer>
         <div class="iconos-redes">
             <a href="https://www.instagram.com/namura_cakes/" class="bi bi-instagram"></a>
@@ -96,13 +97,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="json/productos-detalle.js"></script>
-    <script src="js/productos.js"></script>
-
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>   
 </body>
-
 </html>

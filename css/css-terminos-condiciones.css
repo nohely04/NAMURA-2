@@ -1,0 +1,11 @@
+#texto{
+    justify-content: center;
+    margin: 8px 70px 30px;
+}
+
+article{
+    margin-top: 10px;
+}
+ ul,li,p{
+    font-size: 18px;
+ }

@@ -1,0 +1,10 @@
+#descripcion{
+    text-align: center;
+    font-family: 'Montserrat Light';
+    font-size: 25px;
+    margin: 70px;
+} 
+
+h5,p{
+    margin: 8px 70px 30px;
+}
