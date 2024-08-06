@@ -37,8 +37,8 @@
         }
 }
 #ventasChart{
-    width: 600px;
-    height: 500px;
+    width: 500px; 
+    height: 600px; 
     padding-top: 30px;
     padding-bottom: 45px;
 }
