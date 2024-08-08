@@ -66,20 +66,23 @@
         <section>
             <article>
                 
-                    <form>
+                    <form id="formu">
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                          <span id="error1" class="error">El correo electrónico no es válido.</span>
                           
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputnombre" class="form-label">Nombre Completo</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" id="Inputnombre" aria-describedby="namelHelp">
+                            <span id="error2" class="error">Este campo es obligatorio y no puede contener números.</span>
                             
                           </div>
                           <div class="mb-3">
                             <label for="exampleInputFecha" class="form-label">Fecha Nacimiento</label>
-                            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="date" class="form-control" id="InputFecha" aria-describedby="datelHelp">
+                            <span id="error3" class="error">La fecha debe corresponder a una edad entre 18 y 100 años.</span>
                             
                           </div>
                           <div class="mb-3">
@@ -96,6 +99,7 @@
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                 <label class="form-check-label" for="inlineRadio2">Otros</label>
+                                <span id="error4" class="error"> Seleccione una opción.</span>
                               </div>
                             </div>
                           </div>
@@ -104,17 +108,19 @@
                             <select id="categoria" class="form-select">
                               <option>Opción</option>
                             </select>
+                            <span id="error5" class="error"> Seleccione una opción.</span>
                          </div>
                          <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                            <textarea class="form-control" placeholder="Leave a comment here" id="inputComentario"></textarea>
                             <label for="floatingTextarea">Comentarios adicionales</label>
+                            <span id="error6" class="error"> Seleccione una opción.</span>
                           </div>
                          <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Aceptar politicas de privacidad</label>
                           </div>
                          
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-primary" id="boton">Enviar</button>
                       </form>    
             </article>
         </section>

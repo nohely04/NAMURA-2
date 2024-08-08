@@ -1,29 +1,89 @@
-.container{
-margin-top: 45px;
-margin-bottom: 45px;
+.container {
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
-section{
+
+section {
   padding: 20px;
 }
+
 .custom-carousel {
   min-height: 300px;
 }
+
 .custom-carousel .carousel-item {
   height: 50%;
 }
+
 .custom-carousel img {
   object-fit: cover;
   height: 100%;
-  
+  border-radius: 10px;
+}
 
-}  
+/* Ajustar el espaciado de los botones de navegación */
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  width: 20%;
+  /* Ajusta el tamaño de los botones */
+  /* Puedes agregar más estilos si es necesario */
+
+  /* Añade espacio a los lados del botón */
+}
+
+#titulo{
+  font-family: League;
+  font-size: 40px;
+  text-align: center;
+  color: #dd7888;
+  margin-bottom: 20px;
   
+}
+a{
+  color:#dd7888
+}
+.reseñas{
+  margin: 45px;
+  text-align: center;
+}
+.reseñas h4{
+  font-family: League;
+  font-size: 40px;
+  color:#dd7888
+}
+.reseñas .card {
+  box-shadow: 0px 2px 5px #dd7888;
+  border: #dd7888;
+  min-height: 170px;
+}
+
+/* Ajusta el tamaño del campo de entrada */
+.quantity-libro {
+  width: 3rem; /* Ajusta el ancho del input según sea necesario */
+  text-align: center; 
+
   
-  /* Ajustar el espaciado de los botones de navegación */
-  .custom-carousel .carousel-control-prev,
-  .custom-carousel .carousel-control-next {
-    width: 20%; /* Ajusta el tamaño de los botones */
-    /* Puedes agregar más estilos si es necesario */
-    
-    /* Añade espacio a los lados del botón */
-  }
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  border: transparent;
+
+}
+.btn-outline-secondary:hover {
+  background-color: #dd7888;
+  color: #fff; 
+}
+.comprar{
+  background-color: #dd7888;
+  border-color: #dd7888;
+
+}
+.comprar:hover{
+  background-color: #FCBFC9;
+  border-color: #FCBFC9;
+}
+ div .bottom-content{
+  align-items: start;
+ }
+

@@ -75,14 +75,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
-        "usuario": "Juan Pérez",
-        "valoracion": 5,
-        "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+        "usuario": "Luis Herrera",
+        "comentario": "Los pedí para la fiesta de mi hijo y a mis invitados le encantaron. Definitivamente un 10."
       },
       {
-        "usuario": "Ana Martínez",
-        "valoracion": 4,
-        "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+        "usuario": "Julia Serrano",
+        "comentario": "Muy buenos, aunque me gustaría que tuvieran más relleno de dulce de leche."
       }
     ]
     
@@ -106,14 +104,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
-        "usuario": "Juan Pérez",
-        "valoracion": 5,
-        "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+        "usuario": "Jimena Fernández",
+        "comentario": "Los pedí para la graduación de mi mejor amiga y le encantaron. ¡Súper recomendados!"
       },
       {
-        "usuario": "Ana Martínez",
-        "valoracion": 4,
-        "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+        "usuario": "David Solano",
+        "comentario": "¡Deliciosos!"
       }
     ]
     
@@ -137,14 +133,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
-        "usuario": "Juan Pérez",
-        "valoracion": 5,
-        "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+        "usuario": "Naomy Venegas",
+        "comentario": "El queque un 10, como siempre. El servicio express llegó justo a tiempo."
       },
       {
-        "usuario": "Ana Martínez",
-        "valoracion": 4,
-        "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+        "usuario": "Julio López",
+        "comentario": "Lo compré para una reunión con mis amigos, y es pequeño apenas como para 6 personas."
       }
     ]
     
@@ -168,14 +162,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
-        "usuario": "Juan Pérez",
-        "valoracion": 5,
-        "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+        "usuario": "Sofia Guevara",
+        "comentario": "Muy delicado y delicioso."
       },
       {
-        "usuario": "Ana Martínez",
-        "valoracion": 4,
-        "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+        "usuario": "Pablo Sánchez",
+        "comentario": "A mi novia le encantó, ¡Súper lindo!"
       }
     ]
     
@@ -199,14 +191,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
-        "usuario": "Juan Pérez",
-        "valoracion": 5,
-        "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+        "usuario": "Fabiana Torres",
+        "comentario": "El pan estaba muy esponjoso y tenía un sabor delicioso."
       },
       {
-        "usuario": "Ana Martínez",
-        "valoracion": 4,
-        "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+        "usuario": "Mario Morales",
+        "comentario": "Le faltaba más relleno pero después de ahí no tengo quejas. "
       }
     ]
     
@@ -230,14 +220,13 @@ const productos = [
     "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
-        "usuario": "Juan Pérez",
+        "usuario": "Verónica Vargas",
         "valoracion": 5,
-        "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+        "comentario": "El pastel que pedí llegó justo como lo deseaba. ¡Excelentes productos!"
       },
       {
-        "usuario": "Ana Martínez",
-        "valoracion": 4,
-        "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+        "usuario": "Jimena Matamorros",
+        "comentario": "Aún no puedo superar lo lindo y lo detallado que estaba, ¡Muchas gracias."
       }
     ]
   },{
@@ -260,21 +249,19 @@ const productos = [
     "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
-        "usuario": "Juan Pérez",
-        "valoracion": 5,
-        "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+        "usuario": "Karen Montero",
+        "comentario": "Lo pedí para el baby shower de mi hija, nos encantó."
       },
       {
-        "usuario": "Ana Martínez",
-        "valoracion": 4,
-        "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+        "usuario": "Fabián Quesada",
+        "comentario": "A mi esposa le encantó para nuestro hijo, quedó super satisfecha con el pastel."
       }
     ]
  },{
   "_id": 10,
   "nombre": "Pastel de Stitch",
   "imagen_destacada": "./img/pastel-stitch.jpeg",
-  "precio": 23000,
+  "precio": 27800,
   "categoria": "Infantil",
   "stock": "Disponible",
   "descripcion": "Delicioso pastel de vainilla, con un relleno de dulce de leche y fresa. Ideal para cualquier ocasión especial.",
@@ -290,14 +277,13 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
-      "usuario": "Juan Pérez",
-      "valoracion": 5,
-      "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+      "usuario": "Melanie Arias",
+      "comentario": "¡Sigo impactada con el resultado! Estaba delicioso."
     },
     {
       "usuario": "Ana Martínez",
       "valoracion": 4,
-      "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+      "comentario": "Se nota que cuando se hacen las cosas con amor, y este definitivamente es la descripción de esa frase."
     }
   ]
 },{
@@ -320,19 +306,17 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
-      "usuario": "Juan Pérez",
-      "valoracion": 5,
-      "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+      "usuario": "Liliana Portela",
+      "comentario": "Delicioso, apenas para ser el postre de una reunión."
     },
     {
-      "usuario": "Ana Martínez",
-      "valoracion": 4,
-      "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+      "usuario": "Marco Salas",
+      "comentario": "Le hizo falta ser más húmedo, pero estaba rico."
     }
   ]
 },{
   "_id": 12,
-  "nombre": "Serlva Negra",
+  "nombre": "Selva Negra",
   "imagen_destacada": "./img/pastel-chocolate.jpeg",
   "precio": 16500,
   "categoria": "Torta Fría",
@@ -350,14 +334,12 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
-      "usuario": "Juan Pérez",
-      "valoracion": 5,
-      "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+      "usuario": "Raúl Gutierrez",
+      "comentario": "Nunca había probado un Selva Negra, tan rico. ¡Felicidades!"
     },
     {
-      "usuario": "Ana Martínez",
-      "valoracion": 4,
-      "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+      "usuario": "Brenda Mora",
+      "comentario": "Simplemente ¡Wow!"
     }
   ]
 },{
@@ -380,14 +362,12 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
-      "usuario": "Juan Pérez",
-      "valoracion": 5,
-      "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+      "usuario": "Martha Sandí",
+      "comentario": "Le encantó a mi hija, gracias."
     },
     {
-      "usuario": "Ana Martínez",
-      "valoracion": 4,
-      "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+      "usuario": "Rocio Naranjo",
+      "comentario": "Me hubiera gustado que tuviera más mariposas."
     }
   ]
 },{
@@ -410,14 +390,12 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
-      "usuario": "Juan Pérez",
-      "valoracion": 5,
-      "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+      "usuario": "Angie Castro",
+      "comentario": "Lo pedí para mi cumpleaños, quedé fascinada."
     },
     {
-      "usuario": "Ana Martínez",
-      "valoracion": 4,
-      "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+      "usuario": "Carolina Ulloa",
+      "comentario": "¡Me encantó!."
     }
   ]
 },{
@@ -440,14 +418,12 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
-      "usuario": "Juan Pérez",
-      "valoracion": 5,
-      "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
+      "usuario": "Fernanda Herrera",
+      "comentario": "¡Súper chic!"
     },
     {
-      "usuario": "Ana Martínez",
-      "valoracion": 4,
-      "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de relleno."
+      "usuario": "Debóra Valverde",
+      "comentario": "¡Lo quiero!."
     }
   ]
 }

@@ -11,6 +11,7 @@
     font-family: 'Montserrat Light';
     font-size: 25px;
     margin: 70px;
+    
 } 
 
 #descripcion-productos{
@@ -42,3 +43,12 @@
     padding-top: 30px;
     padding-bottom: 45px;
 }
+
+@media(max-width:767.98px){
+    #ventasChart{
+        width: 20%px; 
+        height: auto; 
+       padding: 30px;
+    }
+}
+
