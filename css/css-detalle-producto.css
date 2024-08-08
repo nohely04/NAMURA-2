@@ -1,15 +1,22 @@
-.carousel-inner img{
-    height: 500px;
-    width: 500px;
-    border-radius: 10px;
+.container{
+margin-top: 45px;
+margin-bottom: 45px;
 }
+section{
+  padding: 20px;
+}
+.custom-carousel {
+  min-height: 300px;
+}
+.custom-carousel .carousel-item {
+  height: 50%;
+}
+.custom-carousel img {
+  object-fit: cover;
+  height: 100%;
+  
 
-/* Ajustar el tamaño del carrusel */
-.custom-carousel, .card {
-    max-width: 70%; /* O el valor que prefieras */
-    margin: 50px 150px; /* Centra el carrusel */
-   
-  }
+}  
   
   
   /* Ajustar el espaciado de los botones de navegación */
@@ -20,6 +27,3 @@
     
     /* Añade espacio a los lados del botón */
   }
-
-
-  /*La carta descrpion*/

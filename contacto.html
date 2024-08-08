@@ -46,7 +46,7 @@
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="preguntas-frecuentes.html">FQA</a>
+                        <a class="nav-link" href="preguntas-frecuentes.html">Preguntas frecuentes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="acerca-de.html">Acerca de</a>
@@ -83,7 +83,7 @@
                             
                           </div>
                           <div class="mb-3">
-                            <label for="exampleInputgenerp" class="form-label">Fecha Nacimiento</label>
+                            <label for="exampleInputgenerp" class="form-label">Género</label>
                             <div class="mb-3">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
@@ -99,6 +99,21 @@
                               </div>
                             </div>
                           </div>
+                          <div class="mb-3">
+                            <label for="categoria" class="form-label">Categoría favorita</label>
+                            <select id="categoria" class="form-select">
+                              <option>Opción</option>
+                            </select>
+                         </div>
+                         <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea">Comentarios adicionales</label>
+                          </div>
+                         <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Aceptar politicas de privacidad</label>
+                          </div>
+                         
                         <button type="submit" class="btn btn-primary">Enviar</button>
                       </form>    
             </article>
@@ -142,6 +157,8 @@
         crossorigin="anonymous"></script>     
 
         <script src="js/contacto.js"></script>
+
+        <script src="json/productos-detalle.js"></script>
 
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </body>

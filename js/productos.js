@@ -31,6 +31,7 @@ function displayCategorias(){
     if($.inArray(categ,categorias)===-1){
       categorias.push(categ)
       select.append( `<option value="${categ}">${categ} </option>`)
+      
     }
     })
   

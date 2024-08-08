@@ -3,8 +3,7 @@
 }
 
 div img{
-    height: 290PX;
-
+    max-height: 250px;
 }
 
 .form-select option, label{
