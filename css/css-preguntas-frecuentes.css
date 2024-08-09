@@ -64,3 +64,11 @@
 .accordion-body li {
     margin-bottom: 10px; 
 }
+
+footer{
+    margin-top: 60px;
+}
+
+a{
+    font-family: Montserrat Light;
+}
