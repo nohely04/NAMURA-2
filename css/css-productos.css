@@ -14,9 +14,12 @@ div img{
 font-family: 'League';
 background-color: #dd7888;
 border: #dd7888;
-align-items: center;
-justify-content: center;
-margin-left: 10px;
+max-width: 150px;
+
+}
+.boton{
+    padding: 0px 0px 20px 0px;
+    
 }
 
 .detalle:hover,
@@ -26,8 +29,13 @@ margin-left: 10px;
     color: white;
 }
 
+main{
+    margin-left: 20px;
+    padding-left: 20px;
+}
 
 .card-title {
     font-weight: bold; /* Aplica negrita al texto */
 }
+
 

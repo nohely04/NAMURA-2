@@ -40,17 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const validarButton = document.getElementById('boton');
 
     validarButton.addEventListener('click', () => {
+        
         // Campos y errores
         const nombreInput = document.getElementById('Inputnombre');
         const emailInput = document.getElementById('InputEmail');
         const fechaInput = document.getElementById('InputFecha');
-        const categoriaSelect = document.getElementById('categoria');
+        const seleccionarCat = document.getElementById('categoria');
+        const radioboton = document.getElementsByName('inlineRadioOptions');
         const comentarioInput = document.getElementById('inputComentario');
-
-        const errorNombre = document.getElementById('error1');
-        const errorEmail = document.getElementById('error2');
+        const errorEmail = document.getElementById('error1');
+        const errorNombre = document.getElementById('error2');
         const errorFecha = document.getElementById('error3');
-        const errorCategoria = document.getElementById('error4');
+        const errorCategoria = document.getElementById('error5');
+        const errorRadio = document.getElementById('error4');
         const errorComentario = document.getElementById('error6');
 
         // Limpiar estados de error
@@ -58,14 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
             error.style.display = 'none';
         });
 
+        let encotrarError = false;
+
         // Validación del nombre
         const nombreValue = nombreInput.value.trim();
         if (nombreValue === '') {
             errorNombre.textContent = "El campo del nombre es obligatorio";
             errorNombre.style.display = 'inline';
+            encotrarError = true;
         } else if (/\d/.test(nombreValue)) {
             errorNombre.textContent = "En el campo nombre no se pueden digitar números";
             errorNombre.style.display = 'inline';
+            encotrarError = true;
         }
 
         // Validación del correo electrónico
@@ -74,9 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (emailValue === '') {
             errorEmail.textContent = "El campo de correo electrónico es obligatorio.";
             errorEmail.style.display = 'inline';
+            encotrarError = true;
         } else if (!emailRegex.test(emailValue)) {
             errorEmail.textContent = "El correo electrónico no es válido.";
             errorEmail.style.display = 'inline';
+            encotrarError = true;
         }
 
         // Validación de la fecha
@@ -84,16 +92,29 @@ document.addEventListener('DOMContentLoaded', () => {
         if (fechaValue === '') {
             errorFecha.textContent = "El campo de fecha de nacimiento es obligatorio.";
             errorFecha.style.display = 'inline';
+            encotrarError = true;
         } else if (!validarEdad(fechaValue)) {
             errorFecha.textContent = "Debes tener entre 18 y 100 años.";
             errorFecha.style.display = 'inline';
+            encotrarError = true;
         }
 
+         // Validación de los botones de radio
+         const radioSeleccionado = Array.from(radioboton).some(radio => radio.checked);
+         if (!radioSeleccionado) {
+             errorRadio.textContent = "Debes seleccionar una opción.";
+             errorRadio.style.display = 'inline';
+             encotrarError = true;
+         }
+ 
+
         // Validación del combo box
-        const categoriaValue = categoria.value;
+          
+        const categoriaValue = seleccionarCat.value;
         if (categoriaValue === '') {
             errorCategoria.textContent = "Debes seleccionar una opción.";
             errorCategoria.style.display = 'inline';
+            encotrarError = true;
         }
 
         // Validación del comentario
@@ -101,8 +122,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (comentarioValue === '') {
             errorComentario.textContent = "El campo del comentario es obligatorio";
             errorComentario.style.display = 'inline';
+            encotrarError = true;
         }
+
+        if (!encotrarError) {
+           alert("¡Formulario enviado con exito!")
+            nombreInput.value = '';
+            emailInput.value = '';
+            fechaInput.value = '';
+            seleccionarCat.value = '';
+            comentarioInput.value = '';
+            // Desmarcar todos los botones de radio
+            radioboton.forEach(radio => radio.checked = false);
+            document.getElementById('Check').checked = false;
+        } 
     });
+
+    
 
     // Función para validar la edad
     function validarEdad(fecha) {
@@ -120,6 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return edad >= 18 && edad <= 100;
     }
+
+   
+    
+
 });
 
-//borrar y mandar msj
+

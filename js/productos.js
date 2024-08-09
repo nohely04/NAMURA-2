@@ -12,11 +12,11 @@ function displayProductos(data){
         <img src="${producto.imagen_destacada ?producto.imagen_destacada : `img/image-not-found.jpg` }" class="card-img-top" alt="image" >
         <div class="card-body">
           <h5 class="card-title">${producto.nombre}</h5>
-          <h6 class="card-text">Desde: &cent;${producto.precio}</h6>
-           <div class="d-grid gap-2">
-              <button type="button" class="btn btn-lg btn-primary detalle" onclick="detalleProductos (${producto._id})">Detalle</button>
-          </div>
+          <h6 class="card-text">Desde: &cent;${producto.precio}</h6>          
        </div>
+          <div class="boton">
+              <button type="button" class="btn btn-lg btn-primary  detalle " onclick="detalleProductos (${producto._id})">Detalle</button>
+          </div>
       </div>
      </div>`
      // prod.append()
