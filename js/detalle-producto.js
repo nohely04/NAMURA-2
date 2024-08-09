@@ -119,18 +119,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const decrementoBtn = document.getElementById('decremento');
     const incrementoBtn = document.getElementById('incremento');
 
+    // Función para actualizar el estado del botón de decremento
+    function updateDecrementButton() {
+        let currentValue = parseInt(input.value, 10);
+        decrementoBtn.disabled = currentValue <= 1;
+    }
+
+    // Deshabilitar el botón de decremento si la cantidad es 1
+    updateDecrementButton();
+
     decrementoBtn.addEventListener('click', () => {
         let currentValue = parseInt(input.value, 10);
-        if (currentValue > 0) {
+        if (currentValue > 1) {
             input.value = currentValue - 1;
         }
+        updateDecrementButton();
     });
 
     incrementoBtn.addEventListener('click', () => {
         let currentValue = parseInt(input.value, 10);
         input.value = currentValue + 1;
+        updateDecrementButton();
     });
 });
+
 
 
 

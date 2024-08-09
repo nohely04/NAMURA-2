@@ -9,6 +9,7 @@ L.marker([9.89517, -84.56065]).addTo(map)
 });
 
 
+
 //Llenar combo box
 document.addEventListener('DOMContentLoaded', () => {
     const selectElement = document.getElementById('categoria');
@@ -55,10 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Campo contiene números
             error.textContent = "En el campo nombre no se pueden digitar números";
             error.style.display = 'inline'; // Mostrar mensaje de error
-        } else {
-            // Validación exitosa
-            alert('Mensaje envíado con exito');
-        }
+        } 
     });
 });
 
@@ -136,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //validacion botones
 document.addEventListener('DOMContentLoaded', () => {
     const validarBoton = document.getElementById('boton');
-    const select = document.getElementById('miSelect');
+    const select = document.getElementById('categoria');
     const error = document.getElementById('error4');
 
     validarBoton.addEventListener('click', () => {
@@ -194,3 +192,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+//borrar y mandar msj
+document.addEventListener('DOMContentLoaded', () => {
+        const comboBox = document.getElementById('categoria');
+        const radioButtons = document.getElementsByName('inlineRadioOptions');
+        const checkBox = document.getElementById('Check');
+        const borrar = document.getElementById('boton');
+        const email = document.getElementById('InputEmail');
+        const name = document.getElementById('Inputnombre');
+        const fecha = document.getElementById('InputFecha');
+        const comentario = document.getElementById('inputComentario');
+
+        alert('Enviado');
+        // Añade un evento al botón para borrar los datos
+        alert.addEventListener('Aceptar', function() {
+            
+            // Borra la selección del combo box
+            comboBox.selectedIndex = 0;
+
+            // Desmarca todos los radio buttons
+            radioButtons.forEach(radio => radio.checked = false);
+
+            // Desmarca el checkbox
+            checkBox.checked = false;
+            email.value = '';
+            name.value = '';
+            comentario.value = '';
+            fecha.value = '';
+        });
+    });

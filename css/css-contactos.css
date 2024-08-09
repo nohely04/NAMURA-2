@@ -16,3 +16,26 @@ form,.card{
     color: red;
      display: none;
 }
+#formu{
+    font-family: Montserrat Light;
+}
+
+#boton{
+    background-color: #dd7888;
+    border-color: #dd7888;
+    color: #fff; 
+    box-shadow: none; 
+  }
+  #boton:hover{
+    background-color: #ffa3b2;
+    border-color: #ffa3b2;
+  }
+  
+  #boton:focus,
+  #boton:active {
+    background-color: #FCBFC9 !important; 
+    border-color: #FCBFC9 !important;
+    color: #fff !important; 
+    outline: none !important; 
+    box-shadow: none !important;
+  }

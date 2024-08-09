@@ -35,7 +35,7 @@ section {
   font-family: League;
   font-size: 40px;
   text-align: center;
-  color: #dd7888;
+  color: #ffa3b2;
   margin-bottom: 20px;
   
 }
@@ -49,7 +49,7 @@ a{
 .reseñas h4{
   font-family: League;
   font-size: 40px;
-  color:#dd7888
+  color:#ffa3b2
 }
 .reseñas .card {
   box-shadow: 0px 2px 5px #dd7888;
@@ -77,11 +77,21 @@ a{
 .comprar{
   background-color: #dd7888;
   border-color: #dd7888;
-
+  color: #fff; 
+  box-shadow: none; 
 }
 .comprar:hover{
-  background-color: #FCBFC9;
-  border-color: #FCBFC9;
+  background-color: #ffa3b2;
+  border-color: #ffa3b2;
+}
+
+.comprar:focus,
+.comprar:active {
+  background-color: #FCBFC9 !important; 
+  border-color: #FCBFC9 !important;
+  color: #fff !important; 
+  outline: none !important; 
+  box-shadow: none !important;
 }
  div .bottom-content{
   align-items: start;
