@@ -61,7 +61,6 @@ function obtenerEstadoMeGusta(numeroReseña) {
 // Función para inicializar el estado del "me gusta" al cargar la página
 function inicializarMeGusta(numeroReseña) {
     const heartIcon = document.getElementById(`heart-icon-${numeroReseña}`);
-    const likeButton = document.getElementById(`like-button-${numeroReseña}`);
 
     const estado = obtenerEstadoMeGusta(numeroReseña);
 
@@ -69,19 +68,16 @@ function inicializarMeGusta(numeroReseña) {
         heartIcon.classList.remove('bi-heart');
         heartIcon.classList.add('bi-heart-fill');
         heartIcon.style.color = 'red';
-        likeButton.disabled = true; // Deshabilitar el botón si ya se ha dado "me gusta"
     } else {
         heartIcon.classList.add('bi-heart');
         heartIcon.classList.remove('bi-heart-fill');
         heartIcon.style.color = 'black';
-        likeButton.disabled = false;
     }
 }
 
 // Función para dar o quitar "Me Gusta" a una reseña
 function darMeGusta(numeroReseña) {
     const heartIcon = document.getElementById(`heart-icon-${numeroReseña}`);
-    const likeButton = document.getElementById(`like-button-${numeroReseña}`);
 
     const estado = obtenerEstadoMeGusta(numeroReseña);
 
@@ -91,27 +87,21 @@ function darMeGusta(numeroReseña) {
         heartIcon.classList.add('bi-heart');
         heartIcon.style.color = 'black';
         actualizarEstadoMeGusta(numeroReseña, 'false');
-        likeButton.disabled = false; // Volver a habilitar el botón para permitir otro "me gusta"
     } else {
         // Dar "me gusta"
         heartIcon.classList.remove('bi-heart');
         heartIcon.classList.add('bi-heart-fill');
         heartIcon.style.color = 'red';
         actualizarEstadoMeGusta(numeroReseña, 'true');
-        likeButton.disabled = true; // Deshabilitar el botón después de dar "me gusta"
     }
 }
 
 // Inicializar el estado de "me gusta" para todas las reseñas al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    // Inicializar el estado del "me gusta" para reseñas específicas
     inicializarMeGusta(1);
     inicializarMeGusta(2);
-
-    // Asignar eventos a los botones de "me gusta"
-    document.getElementById('like-button-1').addEventListener('click', () => darMeGusta(1));
-    document.getElementById('like-button-2').addEventListener('click', () => darMeGusta(2));
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

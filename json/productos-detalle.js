@@ -8,9 +8,9 @@ const productos = [
       "stock": "Disponible",
       "descripcion": "Delicioso pastel tres leches con topping de melocotón y con crema chantilly. Ideal para cualquier ocasión especial.",
       "galeria_imagenes": [
-        "https://th.bing.com/th/id/OIP.myRpF_kCirndelIP6Ux1cgHaE8?rs=1&pid=ImgDetMain",
-        "https://4.bp.blogspot.com/-X3LEAh8yTJM/VUZP6NqHWrI/AAAAAAAAA2E/8D_7vWNKq5w/s1600/DSC_0411.JPG",
-        "https://res.cloudinary.com/oreegano/image/upload/c_fill,f_auto,g_center,h_800,q_auto,w_800/v1496867820/cjaiflsoujp1lrdwjjgg.jpg"
+        "./img/pastel-tres-leches.jpeg",
+        "./img-productos-carrusel/pastel-tres-leches-b.jpeg",
+        "./img-productos-carrusel/pastel-tres-leches-c.jpeg"
       ],
       "tamaños": {
         "Grande": "22cm"
@@ -36,9 +36,9 @@ const productos = [
       "stock": "Disponible",
     "descripcion": "Delicioso tres leches con topping de fresa y chocolate, cubierto de crema chantilly. Ideal para cualquier ocasión especial.",
     "galeria_imagenes": [
-      "https://example.com/imagenes/pastel-chocolate-gourmet-1.jpg",
-      "https://example.com/imagenes/pastel-chocolate-gourmet-2.jpg",
-      "https://example.com/imagenes/pastel-chocolate-gourmet-3.jpg"
+      "./img/pastel-tres-leches-fresa.jpeg",
+      "./img-productos-carrusel/pastel-tres-leches-fresa-b.jpeg",
+      "./img-productos-carrusel/pastel-tres-leches-fresa-c.jpeg"
     ],
    "tamaños": {
         "Mediano": "18cm"
@@ -66,7 +66,7 @@ const productos = [
     "galeria_imagenes": [
       "./img/cupcakes.jpeg",
       "./img-productos-carrusel/colores-b.jpeg",
-      "https://example.com/imagenes/pastel-chocolate-gourmet-3.jpg"
+      "./img-productos-carrusel/colores-c.jpeg"
     ],
     "tamaños": {
         "Mediano": "6 unidades"
@@ -95,7 +95,7 @@ const productos = [
     "galeria_imagenes": [
       "./img/cupcakes-graduación.png",
       "./img-productos-carrusel/cupcakes-graduación-b.jpeg",
-      "https://example.com/imagenes/pastel-chocolate-gourmet-3.jpg"
+      "./img-productos-carrusel/cupcakes-graduación-c.jpeg"
     ],
     "tamaños": {
         "Mediano": "6 unidades"
@@ -144,16 +144,16 @@ const productos = [
     
   },{
     "_id": 6,
-    "nombre": "Bento Cake de Corazón",
-    "imagen_destacada": "./img/pastel-blanco.jpeg",
+    "nombre": "Bento Cake de Sprinkles",
+    "imagen_destacada": "./img-productos-carrusel/chispas-a.jpeg",
     "precio": 8500,
     "categoria": "Bento Cake",
     "stock": "Disponible",
-    "descripcion": "Deliciosos bento cake de vainilla con relleno de moka, en forma de corazón y pequeños de corazones. Ideal para acompañar cualquier momento especial.",
+    "descripcion": "Deliciosos bento cake de vainilla con relleno de moka, y lleno de sprinkles. Ideal para acompañar cualquier momento especial.",
     "galeria_imagenes": [
-      "https://example.com/imagenes/pastel-chocolate-gourmet-1.jpg",
-      "https://example.com/imagenes/pastel-chocolate-gourmet-2.jpg",
-      "https://example.com/imagenes/pastel-chocolate-gourmet-3.jpg"
+      "./img-productos-carrusel/chispas-a.jpeg",
+      "./img-productos-carrusel/chispas-b.jpeg",
+      "./img-productos-carrusel/chispas-c.jpeg"
     ],
     "tamaños": {
         "Pequeño": "12 cm",
@@ -173,19 +173,19 @@ const productos = [
     
   },{
     "_id": 7,
-    "nombre": "Bento Cake de Flores",
-    "imagen_destacada": "./img/pastel-mini-cake.jpeg",
-    "precio": 8500,
-    "categoria": "Bento Cake",
+    "nombre": "Pastel Primera Comunión",
+    "imagen_destacada": "./img/pastel-primera-comunion.jpeg",
+    "precio": 20700,
+    "categoria": "Infantil",
     "stock": "Disponible",
-    "descripcion": "Deliciosos bento cake de vainilla con relleno de dulce de leche y con diseño de flores. Ideal para acompañar cualquier momento especial.",
+    "descripcion": "Deliciosos pastel de vainilla con relleno de dulce de leche y con diseño para primera comunión. Ideal para acompañar ese importante momento de nuestros pequeños.",
     "galeria_imagenes": [
-      "https://example.com/imagenes/pastel-chocolate-gourmet-1.jpg",
-      "https://example.com/imagenes/pastel-chocolate-gourmet-2.jpg",
-      "https://example.com/imagenes/pastel-chocolate-gourmet-3.jpg"
+      "./img/pastel-primera-comunion.jpeg",
+      "./img-productos-carrusel/pastel-primera-comunion.jpeg",
+      "./img-productos-carrusel/pastel-primera-comunion-b.jpeg"
     ],
     "tamaños": {
-        "Pequeño": "12 cm",
+        "Pequeño": "22 cm",
       },
       "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
@@ -238,9 +238,9 @@ const productos = [
     "stock": "Disponible",
     "descripcion": "Delicioso pastel de vainilla, con relleno de dulce de leche y con un diseño infantil de elefante. Ideal para cualquier ocasión especial.",
     "galeria_imagenes": [
-      "https://th.bing.com/th/id/OIP.myRpF_kCirndelIP6Ux1cgHaE8?rs=1&pid=ImgDetMain",
-      "https://4.bp.blogspot.com/-X3LEAh8yTJM/VUZP6NqHWrI/AAAAAAAAA2E/8D_7vWNKq5w/s1600/DSC_0411.JPG",
-      "https://res.cloudinary.com/oreegano/image/upload/c_fill,f_auto,g_center,h_800,q_auto,w_800/v1496867820/cjaiflsoujp1lrdwjjgg.jpg"
+      "./img/pastel-elefante.jpeg",
+      "./img-productos-carrusel/pastel-elefante-b.jpeg",
+      "./img-productos-carrusel/pastel-elefante-c.jpeg"
     ],
     "tamaños": {
       "Grande": "22cm"
@@ -409,7 +409,7 @@ const productos = [
   "galeria_imagenes": [
     "./img-productos-carrusel/pastel-bolso-b.jpeg",
     "./img-productos-carrusel/pastel-bolso-a.jpeg",
-    "https://res.cloudinary.com/oreegano/image/upload/c_fill,f_auto,g_center,h_800,q_auto,w_800/v1496867820/cjaiflsoujp1lrdwjjgg.jpg"
+    "./img-productos-carrusel/pastel-bolso-c.jpeg"
   ],
   "tamaños": {
     "Mediano": "18cm",
