@@ -39,7 +39,7 @@
             </button>
     
             <!-- Botón de colapso del menú -->
-            <button class="navbar-toggler order-1 order-lg-2" type="button" onclick="detallCompra()" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler order-1 order-lg-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -76,98 +76,101 @@
                 <h2 class="titulo">Contacto</h2>
             </article>
         </section> 
-        <div class="container">
+        
+        <div class="container ">
             <div class="row">
                 <!-- Formulario -->
-                <div class="col-lg-6 col-md-12">
-                    <section>
-                        <article>
-                            <form id="formu">
-                                <p id="tit">Suscríbete y déjanos tu opinión</p>
-                                <div class="mb-3">
-                                    <label for="InputEmail" class="form-label">Correo Electrónico</label>
-                                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
-                                    <span id="error1" class="error">El correo electrónico no es válido.</span>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="Inputnombre" class="form-label">Nombre Completo</label>
-                                    <input type="text" class="form-control" id="Inputnombre" aria-describedby="namelHelp">
-                                    <span id="error2" class="error">Este campo es obligatorio y no puede contener números.</span>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="InputFecha" class="form-label">Fecha de Nacimiento</label>
-                                    <input type="date" class="form-control" id="InputFecha" aria-describedby="datelHelp">
-                                    <span id="error3" class="error">La fecha debe corresponder a una edad entre 18 y 100 años.</span>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Género</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">Masculino</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                        <label class="form-check-label" for="inlineRadio2">Femenino</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                        <label class="form-check-label" for="inlineRadio3">Otros</label>
-                                    </div>
-                                    <span id="error4" class="error">Seleccione una opción.</span>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="categoria" class="form-label">Categoría Favorita</label>
-                                    <select id="categoria" class="form-select">
-                                        <option>Opción</option>
-                                    </select>
-                                    <span id="error5" class="error">Seleccione una opción.</span>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <textarea class="form-control" placeholder="Deja un comentario aquí" id="inputComentario"></textarea>
-                                    <label for="inputComentario">Comentarios</label>
-                                    <span id="error6" class="error">Ingrese un comentario.</span>
-                                </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="Check">
-                                    <label class="form-check-label" for="Check">Aceptar políticas de privacidad</label>
-                                </div>
-                                <div class="text-center mt-3">
-                                    <button type="button" class="btn btn-primary" id="boton">Enviar</button>
-                                </div>
-                            </form>    
-                        </article>
-                    </section>
-                </div>
-        
-                <div class="col-lg-6 col-md-12">
-                    <section>
-                        <article>
-                            <div class="card border-0">
-                                <div class="card-header bg-transparent border-0">
-                                    <p id="tit" class="m-0">Conoce cómo contactarnos</p>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title" id="contacto">Contactos</h3>
-                                    <p class="card-text" id="celular"><i class="bi bi-telephone"></i> 6348-8677</p>
-                                    <p class="card-text" id="correo"><i class="bi bi-envelope-at"></i> namuracakes.cr@gmail.com</p>
-                                    <p class="card-text" id="ubicación"><i class="bi bi-geo-alt"></i> Coyolar, Orotina</p>
-                                    <h3 class="card-text" id="Horario">Horario</h3>
-                                    <p class="card-text">Lun 9:00am - 5:00pm</p>
-                                    <p class="card-text">Mar 9:00am - 5:00pm</p>
-                                    <p class="card-text">Mié 9:00am - 5:00pm</p>
-                                    <p class="card-text">Jue 9:00am - 5:00pm</p>
-                                    <p class="card-text">Vie 9:00am - 5:00pm</p>
-                                    <p class="card-text">Sáb 9:00am - 5:00pm</p>
-                                    <p class="card-text">Dom cerrado</p>
-                                </div>
-                            </div>                            
-                        </article>
-                    </section>
-                </div>
-            </div>
-        </div>
-        
-        
+                <div class="col-lg-6 col-md-12  col-pq-12">
+        <section>
+            <article>
+                    <form id="formu">
+                        <p id="tit">Suscribete y déjanos tu opinión</p>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+                          <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" >
+                          <span id="error1" class="error">El correo electrónico no es válido.</span>
+                          
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputnombre" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="Inputnombre" aria-describedby="namelHelp">
+                            <span id="error2" class="error">Este campo es obligatorio y no puede contener números.</span>
+                            
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputFecha" class="form-label">Fecha Nacimiento</label>
+                            <input type="date" class="form-control" id="InputFecha" aria-describedby="datelHelp">
+                            <span id="error3" class="error">La fecha debe corresponder a una edad entre 18 y 100 años.</span>
+                            
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputgenerp" class="form-label">Género</label>
+                            <div class="mb-3">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Femenino</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Otros</label>
+                              </div>
+                              <span id="error4" class="error"> Seleccione una opción.</span>
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="categoria" class="form-label">Categoría favorita</label>
+                            <select id="categoria" class="form-select">
+                              <option>Opción</option>
+                            </select>
+                            <span id="error5" class="error"> Seleccione una opción.</span>
+                         </div>
+                         <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="inputComentario"></textarea>
+                            <label for="floatingTextarea">Comentarios</label>
+                            <span id="error6" class="error"> Seleccione una opción.</span>
+                          </div>
+                         <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="Check">
+                            <label class="form-check-label" for="exampleCheck1">Aceptar politicas de privacidad</label>
+                          </div>
+                         
+                          <div class="text-center mt-3">
+                            <button type="button" class="btn btn-primary" id="boton">Enviar</button>
+                        </div>
+                      </form>    
+            </article>
+        </section>
+       </div>
+
+        <div class="col-lg-6 col-md-12 col-pq-12">
+        <section>
+            <article>
+                <div class="card" style="width: 350px;">
+                    <p id="tit">Conoce como contactarnos </p>
+                    <div class="card-body">
+                      <h3 class="card-title" id="contacto">Contactos</h3>
+                      <p class="card-text" id="celular"><i class="bi bi-telephone">  6348-8677</i> </p>
+                      <p class="card-text" id="correo" ><i class="bi bi-envelope-at"> namuracakes.cr@gmail.com</i></p>
+                      <p class="card-text" id="ubicación"><i class="bi bi-geo-alt">Coyolar, Orotina</i></p>
+                      <h3 class="card-text" id="Horario">Horario.</h3>
+                      <p class="card-text" >Lun 9:00am - 5:00pm</p>
+                      <p class="card-text" >Mar 9:00am - 5:00pm</p>
+                      <p class="card-text" >Mié 9:00am - 5:00pm</p>
+                      <p class="card-text" >Jue 9:00am - 5:00pm</p>
+                      <p class="card-text" >Vie 9:00am - 5:00pm</p>
+                      <p class="card-text" >Sáb 9:00am - 5:00pm</p>
+                      <p class="card-text" >Dom cerrado</p>
+                    </div>
+                  </div>
+            </article>
+        </section>
+    </div>
+</div>
+</div>
 <div class="row col-pq-6">
     <div id="mapa" > </div>
 </div>
