@@ -17,8 +17,15 @@ document.getElementById('fetchButton').addEventListener('click', function(event)
                     logo = '<img src="./Img/Mastercard.png" alt="MasterCard" />';
                 }
 
+                let tipoTarjeta= '';
+                if(data.Type === 'DEBIT'){
+                    tipoTarjeta='Débito';
+                }else{
+                    tipoTarjeta='Crédito';
+                }
+
                 document.getElementById('result').innerHTML = `
-                    <p class="title"></p><p>${data.Scheme} ${logo}</p>
+                    <p class="title"></p><p>${data.Scheme} ${logo} ${tipoTarjeta}</p>
                 `;
 
                 // Activar los campos de fecha de vencimiento y CVV
@@ -39,14 +46,40 @@ document.getElementById('fetchButton').addEventListener('click', function(event)
 });
 
 document.getElementById('codigoCVV').addEventListener('input', function() {
-    const cvv = document.getElementById('codigoCVV');
+    const cvv = this.value; 
     const cvvError = document.getElementById('errorCVV');
-    const limite = /^\d{3,4}$/;
-
-    if(cvv > 3 && cvv < 4){
-        errorCVV.style.display = 'block';
-    }else{
-        errorCVV.style.display = 'none';
+    const regexCVV = /^\d{3,4}$/; 
+    if (!regexCVV.test(cvv)) {
+        cvvError.style.display = 'block';
+    } else {
+        cvvError.style.display = 'none';
     }
 });
+
+document.getElementById('fechaVencimiento').addEventListener('input', function() {
+    const errorVencimiento = document.getElementById('errorVencimiento');
+    let fecha = this.value;
+
+    // Formatear fecha con barra inclinada
+    fecha = fecha.replace(/[^0-9]/g, ''); // Eliminar caracteres no numéricos
+    if (fecha.length > 2) {
+        fecha = fecha.slice(0, 2) + '/' + fecha.slice(2);
+    }
+    if (fecha.length > 7) {
+        fecha = fecha.slice(0, 7); // Limitar a MM/AAAA
+    }
+    this.value = fecha;
+
+    const regexFecha = /^(0[1-9]|1[0-2])\/\d{4}$/;
+    const fechaActual = new Date();
+    const [mes, anio] = fecha.split('/');
+    const fechaIngreso = new Date(anio, mes - 1);
+
+    if (!regexFecha.test(fecha) || fechaIngreso <= fechaActual) {
+        errorVencimiento.style.display = 'block';
+    } else {
+        errorVencimiento.style.display = 'none';
+    }
+});
+
 
