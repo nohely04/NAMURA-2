@@ -1,31 +1,52 @@
-async function mostrarTarjeta() {
-    const tarjeta = document.getElementById("numeroTarjeta");
-    const numeroTarjeta = tarjeta.val().replace(/\s+/g, '');
+document.getElementById('fetchButton').addEventListener('click', function(event) {
+    event.preventDefault(); 
 
-    if (numeroTarjeta.length < 16) {
-        document.getElementById('errorTarjeta').innerText = 'Ingrese el número de la tarjeta correcto.';
-        return;
+    const bin = document.getElementById('binInput').value;
+
+    if (bin.length === 16) {
+        const num = bin.substring(0, 6);
+        const url = `https://data.handyapi.com/bin/${num}`; 
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                let logo = '';
+                if (data.Scheme.toLowerCase() === 'visa') {
+                    logo = '<img src="./Img/Visa.jpeg" alt="Visa" />';
+                } else if (data.Scheme.toLowerCase() === 'mastercard') {
+                    logo = '<img src="./Img/Mastercard.png" alt="MasterCard" />';
+                }
+
+                document.getElementById('result').innerHTML = `
+                    <p class="title"></p><p>${data.Scheme} ${logo}</p>
+                `;
+
+                // Activar los campos de fecha de vencimiento y CVV
+                document.getElementById('fechaVencimiento').disabled = false;
+                document.getElementById('codigoCVV').disabled = false;
+                document.getElementById('submitButton').disabled = false;
+
+                // Agregar atributos required dinámicamente
+                document.getElementById('fechaVencimiento').setAttribute('required', 'required');
+                document.getElementById('codigoCVV').setAttribute('required', 'required');
+            })
+            .catch(error => {
+                document.getElementById('result').innerHTML = `<p>Error al cargar los datos: ${error}</p>`;
+            });
+    } else {
+        alert('El número de tarjeta debe tener exactamente 16 dígitos.');
     }
+});
 
-    const bin = numeroTarjeta.substring(0, 6);
+document.getElementById('codigoCVV').addEventListener('input', function() {
+    const cvv = document.getElementById('codigoCVV');
+    const cvvError = document.getElementById('errorCVV');
+    const limite = /^\d{3,4}$/;
 
-    try {
-        const response = await fetch(`https://data.handyapi.com/bin/${bin}`);
-        const data = await response.json();
-
-        if (data && data.Scheme) {
-            const empresa = data.Scheme.toUpperCase();
-            const logo = (empresa === 'VISA') ? '/img/visa.png' : '/img/mastercard.png';
-            const tipo = (data.Type === 'DEBIT') ? 'Débito' : 'Crédito';
-
-            $('#logo').html(`img src="${logo}" alt="${empresa}" style="max-width: 20px;"`)
-        } else {
-            alert("La tarjeta no corresponde a ninguna empresa");
-            return;
-        }
-    } catch (error) {
-        alert("Error al procesar el pago")
-        return;
+    if(cvv > 3 && cvv < 4){
+        errorCVV.style.display = 'block';
+    }else{
+        errorCVV.style.display = 'none';
     }
-    
-}
+});
+

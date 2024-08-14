@@ -73,35 +73,37 @@
             </article>
         </section>
         <!--Método Pago-->
+        
+   
         <section>
-            <article class="container">
+            <div class="container">
                 <form id="formularioPago" class="d-block mx-auto" style="max-width: 500px;">
                     <p id="tit" class="text-center"><b>Pago con tarjeta</b></p>
-                    <div class="mb-3">
-                        <label for="numeroTarjeta" class="form-label"><b>Número de Tarjeta</b></label>
-                        <input type="text" class="form-control" id="numeroTarjeta" placeholder="Ingrese el número de tarjeta" required>
-                        <small id="errorTarjeta" class="mensaje-error text-danger">Por favor, ingrese un número de tarjeta válido.</small>
+                    <div class="input-container d-flex mb-3">
+                        <input type="text" id="binInput" class="form-control me-2" placeholder="Ingrese su número de tarjeta" maxlength="16">
+                        <button id="fetchButton" class="btn btn-primary estilo">Validar</button>
                     </div>
                     <div class="mb-3">
                         <label for="fechaVencimiento" class="form-label"><b>Fecha de Vencimiento (MM/AAAA)</b></label>
-                        <input type="text" class="form-control" id="fechaVencimiento" placeholder="MM/AAAA" required>
-                        <small id="errorVencimiento" class="mensaje-error text-danger">Por favor, ingrese una fecha de vencimiento válida.</small>
+                        <input type="text" class="form-control" id="fechaVencimiento" placeholder="MM/AAAA" disabled>
+                        <small id="errorVencimiento" class="mensaje-error" style="display:none;">Por favor, ingrese una fecha de vencimiento válida.</small>
                     </div>
                     <div class="mb-3">
                         <label for="codigoCVV" class="form-label"><b>CVV</b></label>
-                        <input type="text" class="form-control" id="codigoCVV" placeholder="Ingrese el CVV" required>
-                        <small id="errorCVV" class="mensaje-error text-danger">Por favor, ingrese un CVV válido.</small>
+                        <input type="text" class="form-control" id="codigoCVV" placeholder="Ingrese el CVV" maxlength="4" disabled>
+                        <small id="errorCVV" class="mensaje-error" style="display:none;">Por favor, ingrese un CVV válido.</small>
                     </div>
-                    <div class="logo-tarjeta mt-4">
-                    <img src="img/image-not-found.jpg" class="card-img-top" alt="Logo" id="logo" style="max-width: 20px;">
-                    </div>
+                    <div class="result-container" id="result"></div>
                     <div class="text-center mt-3">
-                        <button type="submit" class="btn btn-primary pagar" onclick="mostrarTarjeta()">Pagar</button>
+                        <button type="submit" class="btn btn-primary estilo" id="submitButton" disabled>Pagar</button>
                     </div>
                 </form>
-            </article>
+            </div>
         </section>
+        
+        
     </section>
+        
         
         
     </main>

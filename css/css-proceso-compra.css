@@ -8,26 +8,26 @@
     font-family: Montserrat Light;
     text-align: justify;
 }
-.pagar{
-    background-color: #dd7888;
-    border-color: #dd7888;
-    color: #fff; 
-    box-shadow: none; 
+.estilo {
+    background-color: #dd7888 !important;
+    border-color: #dd7888 !important;
+    color: #fff;
+    box-shadow: none !important;
     align-items: center;
 }
-.pagar:hover{
- background-color: #ffa3b2;
-border-color: #ffa3b2;
+.estilo:hover {
+    background-color: #ffa3b2 !important;
+    border-color: #ffa3b2 !important;
+}
+.estilo:focus,
+.estilo:active {
+    background-color: #FCBFC9 !important;
+    border-color: #FCBFC9 !important;
+    color: #fff !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-#pagar:focus,
-#pagar:active {
-background-color: #FCBFC9 !important; 
-border-color: #FCBFC9 !important;
-color: #fff !important; 
-outline: none !important; 
-box-shadow: none !important;
-}
 #tit{
     font-family: League;
     font-size: 35px;
@@ -35,14 +35,24 @@ box-shadow: none !important;
     text-align: center;
   }
 
-.logo-tarjeta {
-    width: 100px; 
+  .result-container {
+    width: 150px;
     height: auto;
     display: block;
-    margin: 0 auto; 
-    border: 1px solid #ddd; 
-    padding: 5px; 
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center; 
 }
+
+.result-container img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
 .mensaje-error {
     color: #e74c3c;
     margin-top: 5px;
