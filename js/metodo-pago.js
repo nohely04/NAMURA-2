@@ -27,5 +27,5 @@ async function mostrarTarjeta() {
         alert("Error al procesar el pago")
         return;
     }
-
+    
 }
