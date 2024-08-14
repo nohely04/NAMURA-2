@@ -13,7 +13,7 @@ $(document).ready(function () {
         const row = document.createElement('tr');
         console.table(item.imagen)
         row.innerHTML = `
-            <td>${item.productoId}</td>
+            <td> <button type="button" class="btn-close eliminar" aria-label="Close" data-id="${item.id}"> <i class="bi bi-x-lg"></i></button></td>
             <td><img src="${item.imagen}" alt="imagen" style="width: 100px; height: 100PX; class="img-fluid"></td>
             <td>${item.nombre}</td>
             <td>${item.pre}</td>
@@ -23,14 +23,28 @@ $(document).ready(function () {
 
         tbody.appendChild(row);
     });
+    $(document).on("click", ".eliminar", function() {
+        const id = $(this).data("id");
+        eliminar(id);
+    });
+   
 })
 
 
-
+// Función para eliminar un ítem del localStorage por su clave
+function eliminar(id) {
+    // Verifica si el ítem existe en el localStorage
+    if (localStorage.getItem(id)) {
+        // Elimina el ítem del localStorage
+        localStorage.removeItem(id);    
+    } 
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //mostrar detalle
+
+
 
 
 

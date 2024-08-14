@@ -36,12 +36,12 @@ box-shadow: none !important;
   }
 
 .logo-tarjeta {
-    width: 100px; /* Ajusta el tamaño según tu necesidad */
+    width: 100px; 
     height: auto;
     display: block;
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    border: 1px solid #ddd; /* Añade un borde para hacer visible el contenedor */
-    padding: 5px; /* Añade algo de relleno */
+    margin: 0 auto; 
+    border: 1px solid #ddd; 
+    padding: 5px; 
 }
 .mensaje-error {
     color: #e74c3c;
