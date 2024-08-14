@@ -1,0 +1,50 @@
+#formularioPago{
+    margin: 50px 150px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0px 0px 5px #dd7888;
+    border: #dd7888;
+    border-radius: 10px;
+    font-family: Montserrat Light;
+    text-align: justify;
+}
+.pagar{
+    background-color: #dd7888;
+    border-color: #dd7888;
+    color: #fff; 
+    box-shadow: none; 
+    align-items: center;
+}
+.pagar:hover{
+ background-color: #ffa3b2;
+border-color: #ffa3b2;
+}
+
+#pagar:focus,
+#pagar:active {
+background-color: #FCBFC9 !important; 
+border-color: #FCBFC9 !important;
+color: #fff !important; 
+outline: none !important; 
+box-shadow: none !important;
+}
+#tit{
+    font-family: League;
+    font-size: 35px;
+    color: #ffa3b2;
+    text-align: center;
+  }
+
+.logo-tarjeta {
+    width: 100px; /* Ajusta el tamaño según tu necesidad */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border: 1px solid #ddd; /* Añade un borde para hacer visible el contenedor */
+    padding: 5px; /* Añade algo de relleno */
+}
+.mensaje-error {
+    color: #e74c3c;
+    margin-top: 5px;
+    display: none;
+}

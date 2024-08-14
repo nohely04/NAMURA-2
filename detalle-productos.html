@@ -20,12 +20,23 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menú">
-        <div class="container-fluid justify-content-end">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid">
+            <!-- Botón del carrito -->
+            <button type="button" class="btn carrito-button position-relative ms-2 order-2 order-lg-3" onclick="detallCompra()">
+                <i class="bi bi-cart-plus fs-3"></i>
+                <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                    <span class="visually-hidden">Nuevo producto asignado</span>
+                </span>
+            </button>
+    
+            <!-- Botón de colapso del menú -->
+            <button class="navbar-toggler order-1 order-lg-2" type="button" onclick="detallCompra()" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+    
+            <!-- Menú colapsado -->
+            <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
@@ -111,7 +122,7 @@
                                 <input id="cantidad" min="0" name="quantity" value="1" type="number" class="form-control form-control-sm quantity-libro" />
                                 <button id="incremento" class="btn btn-outline-secondary ms-2">+</button>
                             </div>
-                            <button type="button" class="btn btn-lg btn-primary comprar">Agregar al Carrito</button>
+                            <button type="button" class="btn btn-lg btn-primary comprar" onclick="carrito()">Agregar al Carrito</button>
                         </div>
                     </div>
                     </div>
@@ -171,6 +182,8 @@
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script src="json/productos-detalle.js"></script>
         <script src="js/detalle-producto.js"></script>
+        <script src="js/localStorage.js"></script>
+        <script src="js/mostrar.js"></script>
 
 </body>
 </html>

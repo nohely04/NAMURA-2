@@ -104,6 +104,38 @@ footer {
     text-align: center;
 }
 
+/* Estilo del botón de carrito */
+.carrito-button {
+    background-color: #FCBFC9;
+    color: #fff;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    z-index: 1050; 
+}
+
+/* Color del ícono dentro del botón */
+.carrito-button i {
+    color: #fff; /* Color blanco por defecto */
+}
+
+.carrito-button:focus {
+    background-color: #FCBFC9 !important; 
+    color: #fff ; 
+}
+.carrito-button:active,
+.carrito-button:hover{
+    background-color: #FCBFC9 !important; 
+    color: #dd7888 !important; 
+}
+
+/* Asegura que el ícono herede el color del botón */
+.carrito-button i {
+    color: inherit !important;
+}
+
+
+
 @media(max-width:767.98px){
     header img{
        width: 140px;

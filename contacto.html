@@ -28,12 +28,24 @@
 
     </header>
     <!--Menú-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menú">
-        <div class="container-fluid justify-content-end">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menú">
+        <div class="container-fluid">
+            <!-- Botón del carrito -->
+            <button type="button" class="btn carrito-button position-relative ms-2 order-2 order-lg-3" onclick="detallCompra()">
+                <i class="bi bi-cart-plus fs-3"></i>
+                <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                    <span class="visually-hidden">Nuevo producto asignado</span>
+                </span>
+            </button>
+    
+            <!-- Botón de colapso del menú -->
+            <button class="navbar-toggler order-1 order-lg-2" type="button" onclick="detallCompra()" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+    
+            <!-- Menú colapsado -->
+            <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
@@ -72,9 +84,10 @@
         <section>
             <article>
                     <form id="formu">
+                        <p id="tit">Suscribete y déjanos tu opinión</p>
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-                          <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                          <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" >
                           <span id="error1" class="error">El correo electrónico no es válido.</span>
                           
                         </div>
@@ -137,6 +150,7 @@
         <section>
             <article>
                 <div class="card" style="width: 350px;">
+                    <p id="tit">Conoce como contactarnos </p>
                     <div class="card-body">
                       <h3 class="card-title" id="contacto">Contactos</h3>
                       <p class="card-text" id="celular"><i class="bi bi-telephone">  6348-8677</i> </p>
@@ -180,7 +194,7 @@
         <script src="json/productos-detalle.js"></script>
 
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
+        <script src="js/mostrar.js"></script>
         
 </body>
 

@@ -39,3 +39,9 @@ form,.card{
     outline: none !important; 
     box-shadow: none !important;
   }
+  #tit{
+    font-family: League;
+    font-size: 35px;
+    color: #ffa3b2;
+    text-align: center;
+  }
