@@ -23,7 +23,9 @@ function carrito(){
             };
         
             Existe(product);
-
+            mostrarNotificacionAnadir();
+        }else{
+            alert("Producto no encontrado.");
         }
 
 }
@@ -63,4 +65,39 @@ function Existe(producto) {
     
     }
 
+}
+
+//FUNCIÓN QUE MUESTRA EL MENSAJE CUANDO SE AÑADE UN PRODUCTO AL CARRITO
+function mostrarNotificacionAnadir() {
+    Swal.fire({
+        icon: 'success',
+        text: '¡Producto añadido al carrito!',
+        timer: 5000, 
+        timerProgressBar: true,
+        showConfirmButton: false
+    })
+}
+//FUNCIÓN QUE PREGUNTA SI ESTÁ SEGURO AL ELIMINAR UN PRODUCTO DEL CARRITO 
+function mostrarNotificacionEliminar(productId) {
+    Swal.fire({
+        icon: 'warning',
+        title: '¿Estás seguro?',
+        text: '¿Quieres eliminar este producto del carrito?',
+        showCancelButton: true, 
+        confirmButtonColor: '#dd7888', 
+        cancelButtonColor: '#3085d6', 
+        confirmButtonText: 'Sí, eliminar', 
+        cancelButtonText: 'No, cancelar', 
+    }).then((result) => {
+        if (result.isConfirmed) {
+            eliminarProductoDelCarrito(productId); // CAMBIAR ESTO PARA CUANDO TENGAMOS LA FUNCIÓN DE ELIMINAR
+            Swal.fire({
+                icon: 'success',
+                title: 'Eliminado',
+                text: 'El producto ha sido eliminado del carrito.',
+                showConfirmButton: false,
+                timer: 2000
+            });
+        }
+    });
 }

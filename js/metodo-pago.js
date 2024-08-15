@@ -104,30 +104,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función de validación
     function validarFormulario() {
-      const radioSeleccionado = Array.from(radios).some(radio => radio.checked);
-      if (!radioSeleccionado) {
-        errorEnvio.textContent = "Debes seleccionar una opción.";
-        errorEnvio.style.display = 'inline';
-        return false; // Evita el envío del formulario
-      } else {
-        errorEnvio.style.display = 'none';
-        return true; // Permite el envío del formulario
-      }
+        const radioSeleccionado = Array.from(radios).some(radio => radio.checked);
+        if (!radioSeleccionado) {
+            errorEnvio.textContent = "Debes seleccionar una opción.";
+            errorEnvio.style.display = 'inline';
+            return false; // Evita el envío del formulario
+        } else {
+            errorEnvio.style.display = 'none';
+            return true; // Permite el envío del formulario
+        }
     }
 
     // Escucha el cambio en los radios
     radios.forEach(radio => {
-      radio.addEventListener('change', function() {
-        validarFormulario(); 
-      });
+        radio.addEventListener('change', function() {
+            validarFormulario(); 
+        });
     });
 
     // Escucha el envío del formulario
     formulario.addEventListener('submit', function(event) {
-      if (!validarFormulario()) {
-        event.preventDefault();
-      }
+        event.preventDefault(); // Prevenir el envío por defecto
+        
+        // Validar el formulario antes de proceder
+        if (validarFormulario()) {
+            mostrarNotificacionPagoExitoso(); // Mostrar la notificación si la validación es exitosa
+        }
     });
-  });
+});
 
+function mostrarNotificacionPagoExitoso() {
+    Swal.fire({
+        icon: 'success',
+        title: '¡Pago realizado con éxito!',
+        text: 'Gracias por tu compra.',
+        confirmButtonColor: '#dd7888',
+        timer: 10000, 
+        timerProgressBar: true,
+        showConfirmButton: true,
+        confirmButtonText: 'Cerrar'
+    }).then(() => {
+        limpiarFormulario(); // Llamar a la función para limpiar el formulario
+    });
+}
 
+// Función para limpiar el formulario
+function limpiarFormulario() {
+    const formulario = document.getElementById('formulario');
+    formulario.reset(); // Resetea todos los campos del formulario
+    document.getElementById('errorEnvio').style.display = 'none';
+}

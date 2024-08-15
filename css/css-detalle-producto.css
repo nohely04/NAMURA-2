@@ -98,3 +98,9 @@ a{
   align-items: start;
  }
 
+ #regresar{
+  font-family: Montserrat Light;
+  font-size: 18px;
+  /* color: #dd7888; */
+ }
+
