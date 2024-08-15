@@ -12,23 +12,24 @@ document.getElementById('fetchButton').addEventListener('click', function(event)
             .then(data => {
                 let logo = '';
                 if (data.Scheme.toLowerCase() === 'visa') {
-                    logo = '<img src="./Img/Visa.jpeg" alt="Visa" />';
+                    logo = '<img src="./img/visa.png" alt="Visa" />';
                 } else if (data.Scheme.toLowerCase() === 'mastercard') {
-                    logo = '<img src="./Img/Mastercard.png" alt="MasterCard" />';
+                    logo = '<img src="./img/mastercard.png" alt="MasterCard" />';
                 }
 
                 let tipoTarjeta= '';
                 if(data.Type === 'DEBIT'){
-                    tipoTarjeta='Débito';
+                    tipoTarjeta='DÉBITO';
                 }else{
-                    tipoTarjeta='Crédito';
+                    tipoTarjeta='CRÉDITO';
                 }
 
                 document.getElementById('result').innerHTML = `
-                    <p class="title"></p><p>${data.Scheme} ${logo} ${tipoTarjeta}</p>
+                    <p class="title"></p><p>${data.Scheme} ${tipoTarjeta} ${logo}</p>
                 `;
 
                 // Activar los campos de fecha de vencimiento y CVV
+                document.getElementById('nombreTitular').disabled = false;
                 document.getElementById('fechaVencimiento').disabled = false;
                 document.getElementById('codigoCVV').disabled = false;
                 document.getElementById('submitButton').disabled = false;
@@ -81,5 +82,52 @@ document.getElementById('fechaVencimiento').addEventListener('input', function()
         errorVencimiento.style.display = 'none';
     }
 });
+
+document.getElementById('nombreTitular').addEventListener('input', function() {
+    const nombre = this.value;
+    const errorNombre = document.getElementById('errorNombre');
+    const regexNombre = /^[a-zA-Z\s]{3,}$/; 
+
+    if (!regexNombre.test(nombre)) {
+        errorNombre.style.display = 'block';
+    } else {
+        errorNombre.style.display = 'none';
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const formulario = document.getElementById('formulario');
+    const radios = document.querySelectorAll('input[name="inlineRadioOptions"]');
+    const errorEnvio = document.getElementById('errorEnvio');
+    const submitButton = document.getElementById('submitButton');
+
+    // Función de validación
+    function validarFormulario() {
+      const radioSeleccionado = Array.from(radios).some(radio => radio.checked);
+      if (!radioSeleccionado) {
+        errorEnvio.textContent = "Debes seleccionar una opción.";
+        errorEnvio.style.display = 'inline';
+        return false; // Evita el envío del formulario
+      } else {
+        errorEnvio.style.display = 'none';
+        return true; // Permite el envío del formulario
+      }
+    }
+
+    // Escucha el cambio en los radios
+    radios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        validarFormulario(); 
+      });
+    });
+
+    // Escucha el envío del formulario
+    formulario.addEventListener('submit', function(event) {
+      if (!validarFormulario()) {
+        event.preventDefault();
+      }
+    });
+  });
 
 

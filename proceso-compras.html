@@ -27,19 +27,22 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menú">
         <div class="container-fluid">
             <!-- Botón del carrito -->
-            <button type="button" class="btn carrito-button position-relative ms-2 order-2 order-lg-3" onclick="detallCompra()">
+            <button type="button" class="btn carrito-button position-relative ms-2 order-2 order-lg-3"
+                onclick="detallCompra()">
                 <i class="bi bi-cart-plus fs-3"></i>
-                <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                <span
+                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
                     <span class="visually-hidden">Nuevo producto asignado</span>
                 </span>
             </button>
-    
+
             <!-- Botón de colapso del menú -->
-            <button class="navbar-toggler order-1 order-lg-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+            <button class="navbar-toggler order-1 order-lg-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <!-- Menú colapsado -->
             <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -73,39 +76,68 @@
             </article>
         </section>
         <!--Método Pago-->
-        
-   
         <section>
-            <div class="container">
-                <form id="formularioPago" class="d-block mx-auto" style="max-width: 500px;">
-                    <p id="tit" class="text-center"><b>Pago con tarjeta</b></p>
-                    <div class="input-container d-flex mb-3">
-                        <input type="text" id="binInput" class="form-control me-2" placeholder="Ingrese su número de tarjeta" maxlength="16">
-                        <button id="fetchButton" class="btn btn-primary estilo">Validar</button>
-                    </div>
-                    <div class="mb-3">
-                        <label for="fechaVencimiento" class="form-label"><b>Fecha de Vencimiento (MM/AAAA)</b></label>
-                        <input type="text" class="form-control" id="fechaVencimiento" placeholder="MM/AAAA" disabled>
-                        <small id="errorVencimiento" class="mensaje-error" style="display:none;">Por favor, ingrese una fecha de vencimiento válida.</small>
-                    </div>
-                    <div class="mb-3">
-                        <label for="codigoCVV" class="form-label"><b>CVV</b></label>
-                        <input type="text" class="form-control" id="codigoCVV" placeholder="Ingrese el CVV" maxlength="4" disabled>
-                        <small id="errorCVV" class="mensaje-error" style="display:none;">Por favor, ingrese un CVV válido.</small>
-                    </div>
-                    <div class="result-container" id="result"></div>
-                    <div class="text-center mt-3">
-                        <button type="submit" class="btn btn-primary estilo" id="submitButton" disabled>Pagar</button>
-                    </div>
-                </form>
+            <div class="container d-block mx-auto" style="max-width: 500px;">
+                <div class="Pago">
+                    <form id="formulario">
+                        <!--Parte de envio-->
+                        <p id="tit" class="text-center"><b>Opciones de Envio</b></p>
+                        <div class="mb-3">
+                            <label for="tipoEnvio" class="form-label">Envio: </label>
+                            <div class="mb-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="express"
+                                        value="Express">
+                                    <label class="form-check-label" for="express">Servicio express</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tienda"
+                                        value="Tienda">
+                                    <label class="form-check-label" for="tienda">Recoger en tienda</label>
+                                </div>
+                                <small id="errorEnvio" class="mensaje-error" style="display:none;">Por favor,
+                                    seleccione una opción.</small>
+                            </div>
+                        </div>
+        
+                        <!--Parte de Pago-->
+                        <p id="tit" class="text-center"><b>Pago con Tarjeta</b></p>
+                        <div class="input-container d-flex mb-3">
+                            <input type="text" id="binInput" class="form-control me-2"
+                                placeholder="Ingrese su número de tarjeta" maxlength="16">
+                            <button id="fetchButton" class="btn btn-primary estilo">Validar</button>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombreTitular" class="form-label"><b>Nombre del Titular</b></label>
+                            <input type="text" class="form-control" id="nombreTitular" placeholder="Nombre del titular"
+                                disabled>
+                            <small id="errorNombre" class="mensaje-error" style="display:none;">Por favor, ingrese un
+                                nombre válido.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fechaVencimiento" class="form-label"><b>Fecha de Vencimiento</b></label>
+                            <input type="text" class="form-control" id="fechaVencimiento" placeholder="MM/AAAA"
+                                disabled>
+                            <small id="errorVencimiento" class="mensaje-error" style="display:none;">Por favor, ingrese
+                                una fecha de vencimiento válida.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="codigoCVV" class="form-label"><b>CVV</b></label>
+                            <input type="text" class="form-control" id="codigoCVV" placeholder="Ingrese el CVV"
+                                maxlength="4" disabled>
+                            <small id="errorCVV" class="mensaje-error" style="display:none;">Por favor, ingrese un CVV
+                                válido.</small>
+                        </div>
+                        <div class="result-container" id="result"></div>
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-primary estilo" id="submitButton"
+                                disabled>Pagar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
-        
-        
-    </section>
-        
-        
-        
+
     </main>
     <footer>
         <div class="iconos-redes">
@@ -119,11 +151,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <script src="js/metodo-pago.js"></script>
-        <script src="js/mostrar.js"></script>
+    <script src="js/metodo-pago.js"></script>
+    <script src="js/mostrar.js"></script>
 
 </body>
 
 </html>
-
-    

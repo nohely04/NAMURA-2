@@ -1,5 +1,6 @@
 form,.card{
-    margin: 50px 150px;
+    /* margin: 50px 150px; */
+    margin: 60px;
     padding: 20px;
     box-shadow: 0px 0px 5px #dd7888;
     border: #dd7888;
@@ -19,7 +20,9 @@ form,.card{
 #formu{
     font-family: Montserrat Light;
 }
-
+#Horario{
+  text-align: center;
+}
 #boton{
     background-color: #dd7888;
     border-color: #dd7888;
