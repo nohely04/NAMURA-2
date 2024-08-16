@@ -27,7 +27,7 @@ function carrito(){
             Existe(product);
             mostrarNotificacionAnadir();
         }else{
-            alert("Producto no encontrado.");
+            mostrarNotificacionError();
         }
 
 }
@@ -81,7 +81,7 @@ function mostrarNotificacionAnadir() {
 }
 function mostrarNotificacionError() {
     Swal.fire({
-        icon: 'error',
+        icon: 'warning',
         text: '¡Ha ocurrido un error!',
         timer: 2000, 
         timerProgressBar: true,

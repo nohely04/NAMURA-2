@@ -27,6 +27,7 @@ function mostrarDetalle() {
         tbody.appendChild(row);
        
     });
+    
     $('#total').text("₡" + total);
 
 
