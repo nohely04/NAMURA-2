@@ -4,8 +4,11 @@
     box-shadow: 0px 0px 5px #dd7888;
     border: #dd7888;
 }
-.total{
+.total th{
     text-align: right;
+}
+.total td{
+    text-align: left;
 }
 
 #totalTamanno{
@@ -15,15 +18,10 @@
     font-family: Montserrat Light;
 }
 
-/*RESPONSIVO*/
-/* .col-lg-4 {
-    margin-left: -100px;
+.Pago {
     margin-top: -28px;
 }
 
-@media (max-width:767.98px) {
-    .col-lg-4 {
-        margin-right: 210px;
-    }
-} */
-
+#icon:hover{
+    color: red;
+}

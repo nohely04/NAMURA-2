@@ -16,7 +16,7 @@ function mostrarDetalle() {
     cartArray.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
-        <td> <button type="button" class="btn-close eliminar" aria-label="Close" onclick="eliminar(${item.productoId})" > <i class="bi bi-x-lg"></i></button></td>
+        <td> <button type="button" class="btn eliminar" aria-label="Close" onclick="eliminar(${item.productoId})" > <i class="bi bi-x" id=icon></i></button></td>
         <td><img src="${item.imagen}" alt="imagen" style="width: 100px; height: 100PX; class="img-fluid"></td>
         <td>${item.nombre}</td>
         <td>&cent${item.pre}</td>
@@ -25,8 +25,10 @@ function mostrarDetalle() {
         `;
         total += item.subtotal;
         tbody.appendChild(row);
+       
     });
     $('#total').text("₡" + total);
+
 
 }
 // function eliminar(id) {

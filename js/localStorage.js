@@ -12,6 +12,7 @@ function carrito(){
             const imagen = prod.imagen_destacada;
             var cantidad = parseInt(document.getElementById("cantidad").value);
             const subtotal = cantidad * pre;
+            
     
             let product ={
                 productoId,
@@ -19,7 +20,8 @@ function carrito(){
                 nombre,
                 imagen,
                 cantidad,
-                subtotal 
+                subtotal
+                
             };
         
             Existe(product);
@@ -72,6 +74,15 @@ function mostrarNotificacionAnadir() {
     Swal.fire({
         icon: 'success',
         text: '¡Producto añadido al carrito!',
+        timer: 2000, 
+        timerProgressBar: true,
+        showConfirmButton: false
+    })
+}
+function mostrarNotificacionError() {
+    Swal.fire({
+        icon: 'error',
+        text: '¡Ha ocurrido un error!',
         timer: 2000, 
         timerProgressBar: true,
         showConfirmButton: false
