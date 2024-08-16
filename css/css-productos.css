@@ -12,8 +12,8 @@ div img{
 
 .detalle {
 font-family: 'League';
-background-color: #dd7888;
-border: #dd7888;
+background-color: #dd7888 !important;
+border: #dd7888 !important;
 max-width: 150px;
 
 }
@@ -23,9 +23,10 @@ max-width: 150px;
 }
 
 .detalle:hover,
-.detalle:focus {
+.detalle:focus,
+.detalle:active {
     text-decoration: none; 
-    background-color: #dd7888; 
+    background-color: #dd7888 !important; 
     color: white;
 }
 

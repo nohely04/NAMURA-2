@@ -71,7 +71,7 @@
         </div>
     </nav>
 
-    <main>
+    <!-- <main>
         <section>
             <article>
                 <h2 class="titulo">Carrito</h2>
@@ -104,16 +104,108 @@
                 </table>
                 <table class="table" id="totalTamanno">
                     <tr>
-                        <th scope="col" class="total"> Total</th>
+                        <th scope="col" class="total" > Total</th>
                         <td id="total"class="total" >0</td>
                 </table>
             </div>
         </div>
+    </main> -->
 
-
-
-
+    <main class="container mt-5">
+        <article>
+            <h2 class="titulo">Carrito</h2>
+        </article>
+        <div class="row align-items-start justify-content-center">
+            <!-- Carrito Section -->
+            <section class="col-lg-8 mb-4">
+                <div class="card h-100">
+                    <div class="card-body table-responsive tabla">
+                        <p id="tit" class="text-center"><b>Detalle de la Compra</b></p>
+                        <table class="table detalle" id="detalle">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr>
+                                    <!-- Aquí se añadirán los productos dinámicamente -->
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table" id="totalTamanno">
+                            <tr>
+                                <th scope="col" class="total"> Total</th>
+                                <td id="total" class="total">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Pago Section -->
+            <section class="col-lg-4">
+                <div class="container d-block mx-auto" style="max-width: 500px;">
+                    <div class="Pago">
+                        <form id="formulario">
+                            <!--Parte de envio-->
+                            <p id="tit" class="text-center"><b>Opciones de Envio</b></p>
+                            <div class="mb-3">
+                                <label for="tipoEnvio" class="form-label">Envio: </label>
+                                <div class="mb-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="expressOrotina" value="expressOrotina">
+                                        <label class="form-check-label" for="expressOrotina">Servicio express en la zona de Orotina</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="express" value="Express">
+                                        <label class="form-check-label" for="express">Servicio express</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tienda" value="Tienda">
+                                        <label class="form-check-label" for="tienda">Recoger en tienda</label>
+                                    </div>
+                                    <small id="errorEnvio" class="mensaje-error" style="display:none;">Por favor, seleccione una opción.</small>
+                                </div>
+                            </div>
+    
+                            <!--Parte de Pago-->
+                            <p id="tit" class="text-center"><b>Pago con Tarjeta</b></p>
+                            <div class="input-container d-flex mb-3">
+                                <input type="text" id="binInput" class="form-control me-2" placeholder="Ingrese su número de tarjeta" maxlength="16">
+                                <button id="fetchButton" class="btn btn-primary estilo">Validar</button>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombreTitular" class="form-label"><b>Nombre del Titular</b></label>
+                                <input type="text" class="form-control" id="nombreTitular" placeholder="Nombre del titular" disabled>
+                                <small id="errorNombre" class="mensaje-error" style="display:none;">Por favor, ingrese un nombre válido.</small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fechaVencimiento" class="form-label"><b>Fecha de Vencimiento</b></label>
+                                <input type="text" class="form-control" id="fechaVencimiento" placeholder="MM/AAAA" disabled>
+                                <small id="errorVencimiento" class="mensaje-error" style="display:none;">Por favor, ingrese una fecha de vencimiento válida.</small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="codigoCVV" class="form-label"><b>CVV</b></label>
+                                <input type="text" class="form-control" id="codigoCVV" placeholder="Ingrese el CVV" maxlength="4" disabled>
+                                <small id="errorCVV" class="mensaje-error" style="display:none;">Por favor, ingrese un CVV válido.</small>
+                            </div>
+                            <div class="result-container" id="result"></div>
+                            <div class="text-center mt-3">
+                                <button type="submit" class="btn btn-primary estilo" id="submitButton" disabled>Pagar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+
     <footer>
         <div class="iconos-redes">
             <a href="https://www.instagram.com/namura_cakes/" class="bi bi-instagram"></a>
