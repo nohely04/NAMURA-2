@@ -5,7 +5,7 @@
     border: #dd7888;
 }
 .total{
-    text-align: righ
+    text-align: right;
 }
 
 #totalTamanno{
@@ -15,7 +15,8 @@
     font-family: Montserrat Light;
 }
 
-.col-lg-4 {
+/*RESPONSIVO*/
+/* .col-lg-4 {
     margin-left: -100px;
     margin-top: -28px;
 }
@@ -24,5 +25,5 @@
     .col-lg-4 {
         margin-right: 210px;
     }
-}
+} */
 

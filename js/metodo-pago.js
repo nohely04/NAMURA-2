@@ -144,7 +144,7 @@ function mostrarNotificacionPagoExitoso() {
         showConfirmButton: true,
         confirmButtonText: 'Cerrar'
     }).then(() => {
-        limpiarFormulario(); // Llamar a la función para limpiar el formulario
+        limpiarFormulario();
     });
 }
 
@@ -152,5 +152,10 @@ function mostrarNotificacionPagoExitoso() {
 function limpiarFormulario() {
     const formulario = document.getElementById('formulario');
     formulario.reset(); // Resetea todos los campos del formulario
+    document.getElementById('nombreTitular').disabled = true;
+    document.getElementById('fechaVencimiento').disabled = true;
+    document.getElementById('codigoCVV').disabled = true;
+    document.getElementById('submitButton').disabled = true;
+    document.getElementById('result').innerHTML = '';
     document.getElementById('errorEnvio').style.display = 'none';
 }
