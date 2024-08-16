@@ -159,3 +159,15 @@ function limpiarFormulario() {
     document.getElementById('result').innerHTML = '';
     document.getElementById('errorEnvio').style.display = 'none';
 }
+
+    
+    let total = parseFloat(localStorage.getItem('total'));
+    const express = $('#express').is(':checked');
+    if(express){
+        let costoEnvio = 2000;
+        total += costoEnvio;
+        localStorage.setItem('total', total);   
+    }
+        // Actualizar el total de la compra incluyendo el costo de envío
+        mostrarDetalle();
+    

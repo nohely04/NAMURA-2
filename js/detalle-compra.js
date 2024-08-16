@@ -27,7 +27,7 @@ function mostrarDetalle() {
         tbody.appendChild(row);
        
     });
-    
+    localStorage.setItem('total', total);
     $('#total').text("₡" + total);
 
 
@@ -54,7 +54,7 @@ function eliminar(id) {
     // Verificar que el arreglo del carrito exista
     if (cartArray) {
         // Encontrar el índice del producto a eliminar
-        let index = cartArray.findIndex((prod) => prod.productoId == id);
+        let index = cartArray.findIndex((prod) => prod.productoId === id);
         
         // Si se encontró el producto, proceder a mostrar la notificación
         if (index !== -1) {

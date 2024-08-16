@@ -1,5 +1,5 @@
 function carrito(){
-    /*localStorage.clear();*/
+   /*localStorage.clear();*/
     const url = new URLSearchParams(window.location.search);
     const productoId = url.get("id");
 
