@@ -182,8 +182,12 @@ function limpiarTabla(idTabla) {
 }
 
 document.getElementById('submitButton').addEventListener('click', function() {
-    limpiarTabla('detalle');
     preventDefault(); //CAMBIO AQUÍ
+
+    //Limpia la tabla 
+    limpiarTabla('detalle');
+
+    //redirecciona
      window.location.href = 'factura.html'; 
 });
 
