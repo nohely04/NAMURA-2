@@ -183,6 +183,7 @@ function limpiarTabla(idTabla) {
 
 document.getElementById('submitButton').addEventListener('click', function() {
     limpiarTabla('detalle');
+    preventDefault(); //CAMBIO AQUÍ
      window.location.href = 'factura.html'; 
 });
 
@@ -192,7 +193,7 @@ var nombre = document.getElementById('nombreTitular').value;
 
 }
 
-//SUMAR EL ENVIO EXPRESS Arreglar
+//SUMAR EL ENVIO EXPRESS 
 const expre = document.querySelectorAll('input[name="inlineRadioOptions"]');
 
 function expressSuma(event){
