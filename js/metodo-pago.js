@@ -160,6 +160,20 @@ function limpiarFormulario() {
     document.getElementById('errorEnvio').style.display = 'none';
 }
 
+//LIMPIAR TABLA CUANDO SE LE DA PAGAR
+function limpiarTabla(idTabla) {
+    const tabla = document.getElementById(idTabla).getElementsByTagName('tbody')[0];
+    tabla.innerHTML = '';  
+
+    // Reinicia el total a 0
+    const totalElement = document.getElementById('total');
+    if (totalElement) {
+        totalElement.textContent = '0';
+    }
+}
+document.getElementById('submitButton').addEventListener('click', function() {
+    limpiarTabla('detalle');
+});
     
     let total = parseFloat(localStorage.getItem('total'));
     const express = $('#express').is(':checked');
