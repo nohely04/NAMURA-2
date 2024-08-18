@@ -204,12 +204,12 @@ function expressSuma(event){
     if(seleccionado ==="Express"){
         costo
         extra = 2000;
-        total = costo ;
+        total = costo + extra;
        
           
     }else{
         extra = 0;
-        total + extra;
+        total = costo + extra;
         
     }
     localStorage.setItem('total', total); 

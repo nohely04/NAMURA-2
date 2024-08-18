@@ -28,12 +28,14 @@ function mostrarFactura() {
     
         <td>${item.nombre}</td>
         <td>&cent${item.pre}</td>
+        <td>        </td>
+        <td>        </td>
         <td>${item.cantidad}</td>
         <td>&cent;${item.subtotal}</td>
         `;
         tbody.appendChild(row);
     });
-    var total = JSON.parse(localStorage.getItem('total')) || [];
+    var total = JSON.parse(localStorage.getItem('total')) ;
     $('#total').text("₡" + total);
 
 }
