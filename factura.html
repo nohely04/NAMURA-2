@@ -11,5 +11,68 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="./css/css-principal.css" rel="stylesheet" />
 </head>
+<body>
+    <header>
+        <figure>
+            <img src="./img/logo-sin-fondo.png" alt="Logo" width="150" height="130" style="float: left;"></img>
+        </Figure>
+        <H1>NAMURA</H1>
+        <H4>CAKE SHOP</H4>
+    </header>
+<main>
+    <section>
+        <article>
+            <h2 class="titulo">Factura</h2>
+            <p id="subtitulo">En NAMURA estamos agradecidos contigo por confiar en nuestros servicios
+                para hacer de tus celebraciones aún más dulces y deliciosas. Por eso acá te entregamos
+                el voucher de la compra que acabas de realizar. ¡Muchas gracias!
+            </p>
+        </article>
+    </section>
+    <section>
+            <div class="row align-items-start justify-content-center">
+                <!-- Carrito Section -->
+                <section class="col-lg-8 col-md-12 mb-4 ">
+                    <div class="card h-100">
+                        <div class="card-body table-responsive tabla">
+                            
+                            <table class="table detalle" id="detalle">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col" id="fecha">Fecha</th>
+                                        <th scope="col" id="nombre">Nombre</th>
+                                        <th scope="col" id="factura">Número de Factura</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <!-- Aquí se añadirán los productos dinámicamente -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table" id="totalTamanno">
+                                <tr>
+                                    <th scope="col" class="total"> Total</th>
+                                    <td id="total" class="total">0</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-primary estilo" id="regresar" disabled onclick="regresar()">Regresar</button>
+                    </div>
+                </section>
+        
+    </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.10/dist/sweetalert2.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/factura.js"></script>
+
+</body>
 
 </html>

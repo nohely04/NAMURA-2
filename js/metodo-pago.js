@@ -173,8 +173,16 @@ function limpiarTabla(idTabla) {
 }
 document.getElementById('submitButton').addEventListener('click', function() {
     limpiarTabla('detalle');
+
 });
-    
+function obtenerNombre(){
+var nombre = document.getElementById('nombreTitular').value;
+
+    localStorage.setItem('Nombre', nombre);
+
+}
+
+//SUMAR EL ENVIO EXPRESS Arreglar
     let total = parseFloat(localStorage.getItem('total'));
     const express = $('#express').is(':checked');
     if(express){
