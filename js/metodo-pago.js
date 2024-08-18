@@ -1,30 +1,30 @@
 
-document.getElementById('fetchButton').addEventListener('click', function(event) {
-    event.preventDefault(); 
+document.getElementById('fetchButton').addEventListener('click', function (event) {
+    event.preventDefault();
 
     const bin = document.getElementById('binInput').value;
 
     if (bin.length === 16) {
         const num = bin.substring(0, 6);
-        const url = `https://data.handyapi.com/bin/${num}`; 
+        const url = `https://data.handyapi.com/bin/${num}`;
 
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 let logo = '';
                 if (data.Scheme.toLowerCase() === 'visa') {
-                    logo = '<img src="./img/visa.png" alt="Visa"/>'; 
+                    logo = '<img src="./img/visa.png" alt="Visa"/>';
                     localStorage.setItem('tarjeta', 'Visa');
                 } else if (data.Scheme.toLowerCase() === 'mastercard') {
                     logo = '<img src="./img/mastercard.png" alt="MasterCard"/>';
                     localStorage.setItem('tarjeta', 'Mastercard');
                 }
 
-                let tipoTarjeta= '';
-                if(data.Type === 'DEBIT'){
-                    tipoTarjeta='DÉBITO';
-                }else{
-                    tipoTarjeta='CRÉDITO';
+                let tipoTarjeta = '';
+                if (data.Type === 'DEBIT') {
+                    tipoTarjeta = 'DÉBITO';
+                } else {
+                    tipoTarjeta = 'CRÉDITO';
                 }
 
                 document.getElementById('result').innerHTML = `
@@ -49,10 +49,10 @@ document.getElementById('fetchButton').addEventListener('click', function(event)
     }
 });
 
-document.getElementById('codigoCVV').addEventListener('input', function() {
-    const cvv = this.value; 
+document.getElementById('codigoCVV').addEventListener('input', function () {
+    const cvv = this.value;
     const cvvError = document.getElementById('errorCVV');
-    const regexCVV = /^\d{3,4}$/; 
+    const regexCVV = /^\d{3,4}$/;
     if (!regexCVV.test(cvv)) {
         cvvError.style.display = 'block';
     } else {
@@ -60,7 +60,7 @@ document.getElementById('codigoCVV').addEventListener('input', function() {
     }
 });
 
-document.getElementById('fechaVencimiento').addEventListener('input', function() {
+document.getElementById('fechaVencimiento').addEventListener('input', function () {
     const errorVencimiento = document.getElementById('errorVencimiento');
     let fecha = this.value;
 
@@ -86,10 +86,10 @@ document.getElementById('fechaVencimiento').addEventListener('input', function()
     }
 });
 
-document.getElementById('nombreTitular').addEventListener('input', function() {
+document.getElementById('nombreTitular').addEventListener('input', function () {
     const nombre = this.value;
     const errorNombre = document.getElementById('errorNombre');
-    const regexNombre = /^[a-zA-Z\s]{3,}$/; 
+    const regexNombre = /^[a-zA-Z\s]{3,}$/;
 
     if (!regexNombre.test(nombre)) {
         errorNombre.style.display = 'block';
@@ -99,7 +99,7 @@ document.getElementById('nombreTitular').addEventListener('input', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const formulario = document.getElementById('formulario');
     const radios = document.querySelectorAll('input[name="inlineRadioOptions"]');
     const errorEnvio = document.getElementById('errorEnvio');
@@ -120,15 +120,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Escucha el cambio en los radios
     radios.forEach(radio => {
-        radio.addEventListener('change', function() {
-            validarFormulario(); 
+        radio.addEventListener('change', function () {
+            validarFormulario();
         });
     });
 
     // Escucha el envío del formulario
-    formulario.addEventListener('submit', function(event) {
+    formulario.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevenir el envío por defecto
-        
+
         // Validar el formulario antes de proceder
         if (validarFormulario()) {
             mostrarNotificacionPagoExitoso(); // Mostrar la notificación si la validación es exitosa
@@ -136,20 +136,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function mostrarNotificacionPagoExitoso() {
-    Swal.fire({
-        icon: 'success',
-        title: '¡Pago realizado con éxito!',
-        text: 'Gracias por tu compra.',
-        confirmButtonColor: '#dd7888',
-        timer: 10000, 
-        timerProgressBar: true,
-        showConfirmButton: true,
-        confirmButtonText: 'Cerrar'
-    }).then(() => {
-        limpiarFormulario();
-    });
-}
+// function mostrarNotificacionPagoExitoso() {
+//     Swal.fire({
+//         icon: 'success',
+//         title: '¡Pago realizado con éxito!',
+//         text: 'Gracias por tu compra.',
+//         confirmButtonColor: '#dd7888',
+//         timer: 10000, 
+//         timerProgressBar: true,
+//         showConfirmButton: true,
+//         confirmButtonText: 'Cerrar'
+//     }).then(() => {
+//         limpiarFormulario();
+//     });
+// }
 
 // Función para limpiar el formulario
 function limpiarFormulario() {
@@ -166,7 +166,7 @@ function limpiarFormulario() {
 //LIMPIAR TABLA CUANDO SE LE DA PAGAR
 function limpiarTabla(idTabla) {
     const tabla = document.getElementById(idTabla).getElementsByTagName('tbody')[0];
-    tabla.innerHTML = '';  
+    tabla.innerHTML = '';
 
     // Reinicia el total a 0
     const totalElement = document.getElementById('total');
@@ -174,25 +174,55 @@ function limpiarTabla(idTabla) {
         totalElement.textContent = '0';
     }
 
-       // Reinicia el extra a 0
-       const extra = document.getElementById('extra');
-       if (extra) {
-           extra.textContent = '0';
-       }
+    // Reinicia el extra a 0
+    const extra = document.getElementById('extra');
+    if (extra) {
+        extra.textContent = '0';
+    }
 }
 
-document.getElementById('submitButton').addEventListener('click', function() {
-    preventDefault(); //CAMBIO AQUÍ
 
-    //Limpia la tabla 
-    limpiarTabla('detalle');
+// document.getElementById('submitButton').addEventListener('click', function() {
+//     event.preventDefault(); 
 
-    //redirecciona
-     window.location.href = 'factura.html'; 
+//     //Limpia la tabla 
+//     limpiarTabla('detalle');
+
+//     //redirecciona
+//      window.location.href = 'factura.html'; 
+// });
+
+document.getElementById('submitButton').addEventListener('click', function (event) {
+    event.preventDefault();
+
+    // Muestra la notificación de pago exitoso
+    Swal.fire({
+        icon: 'success',
+        title: '¡Pago realizado con éxito!',
+        text: 'Gracias por tu compra.',
+        confirmButtonColor: '#dd7888',
+        timer: 10000,
+        timerProgressBar: true,
+        showConfirmButton: true,
+        confirmButtonText: 'Cerrar'
+    }).then(() => {
+
+        // Limpiar el formulario
+        limpiarFormulario();
+
+        // Limpiar la tabla 'detalle'
+        limpiarTabla('detalle');
+
+        document.getElementById('factu').disabled = false;
+    });
 });
 
-function obtenerNombre(){
-var nombre = document.getElementById('nombreTitular').value;
+function redireccionar(){
+    window.location.href = 'factura.html';
+}
+
+function obtenerNombre() {
+    var nombre = document.getElementById('nombreTitular').value;
     localStorage.setItem('Nombre', nombre);
 
 }
@@ -200,27 +230,27 @@ var nombre = document.getElementById('nombreTitular').value;
 //SUMAR EL ENVIO EXPRESS 
 const expre = document.querySelectorAll('input[name="inlineRadioOptions"]');
 
-function expressSuma(event){
-    
+function expressSuma(event) {
+
     const seleccionado = event.target.value
     let costo = parseFloat(localStorage.getItem('total'));
     var total;
     var extra;
-    if(seleccionado ==="Express"){
+    if (seleccionado === "Express") {
         costo
         extra = 2000;
         total = costo + extra;
-       
-          
-    }else{
+
+
+    } else {
         extra = 0;
         total = costo + extra;
-        
+
     }
-    localStorage.setItem('total', total); 
-        // Actualizar el total de la compra incluyendo el costo de envío
-        $('#extra').text("₡" + extra);
-    
+    localStorage.setItem('total', total);
+    // Actualizar el total de la compra incluyendo el costo de envío
+    $('#extra').text("₡" + extra);
+
 }
 expre.forEach(leer => {
     leer.addEventListener('change', expressSuma);
