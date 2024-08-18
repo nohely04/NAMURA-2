@@ -1,3 +1,4 @@
+
 document.getElementById('fetchButton').addEventListener('click', function(event) {
     event.preventDefault(); 
 
@@ -12,9 +13,11 @@ document.getElementById('fetchButton').addEventListener('click', function(event)
             .then(data => {
                 let logo = '';
                 if (data.Scheme.toLowerCase() === 'visa') {
-                    logo = '<img src="./img/visa.png" alt="Visa" />';
+                    logo = '<img src="./img/visa.png" alt="Visa"/>'; 
+                    localStorage.setItem('tarjeta', 'Visa');
                 } else if (data.Scheme.toLowerCase() === 'mastercard') {
-                    logo = '<img src="./img/mastercard.png" alt="MasterCard" />';
+                    logo = '<img src="./img/mastercard.png" alt="MasterCard"/>';
+                    localStorage.setItem('tarjeta', 'Mastercard');
                 }
 
                 let tipoTarjeta= '';
@@ -170,26 +173,67 @@ function limpiarTabla(idTabla) {
     if (totalElement) {
         totalElement.textContent = '0';
     }
+
+       // Reinicia el extra a 0
+       const extra = document.getElementById('extra');
+       if (extra) {
+           extra.textContent = '0';
+       }
 }
+
 document.getElementById('submitButton').addEventListener('click', function() {
     limpiarTabla('detalle');
-
+     window.location.href = 'factura.html'; 
 });
+
 function obtenerNombre(){
 var nombre = document.getElementById('nombreTitular').value;
-
     localStorage.setItem('Nombre', nombre);
 
 }
 
 //SUMAR EL ENVIO EXPRESS Arreglar
-    let total = parseFloat(localStorage.getItem('total'));
-    const express = $('#express').is(':checked');
-    if(express){
-        let costoEnvio = 2000;
-        total += costoEnvio;
-        localStorage.setItem('total', total);   
-    }
-        // Actualizar el total de la compra incluyendo el costo de envío
-        mostrarDetalle();
+const expre = document.querySelectorAll('input[name="inlineRadioOptions"]');
+
+function expressSuma(event){
     
+    const seleccionado = event.target.value
+    let costo = parseFloat(localStorage.getItem('total'));
+    var total;
+    var extra;
+    if(seleccionado ==="Express"){
+        costo
+        extra = 2000;
+        total = costo ;
+       
+          
+    }else{
+        extra = 0;
+        total + extra;
+        
+    }
+    localStorage.setItem('total', total); 
+        // Actualizar el total de la compra incluyendo el costo de envío
+        $('#extra').text("₡" + extra);
+    
+}
+expre.forEach(leer => {
+    leer.addEventListener('change', expressSuma);
+});
+
+//GUARDAR EL TIPO DE ENVIO
+
+const radios = document.querySelectorAll('input[name="inlineRadioOptions"]');
+
+// Función para manejar el cambio de los radios
+function guardarEnvio(event) {
+    // Obtener el valor del radio seleccionado
+    const valor = event.target.value;
+    // Guardar en localStorage
+    localStorage.setItem('opcionEnvio', valor);
+}
+
+// Agregar evento de cambio a cada radio
+radios.forEach(radio => {
+    radio.addEventListener('change', guardarEnvio);
+});

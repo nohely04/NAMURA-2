@@ -3,6 +3,10 @@ $(document).ready(function () {
 });
 
 function regresar() {
+    localStorage.removeItem('productos');
+    localStorage.removeItem('total');
+    localStorage.removeItem('Nombre');
+    localStorage.removeItem('opcionEnvio');
     window.location.href = 'index.html'; /*redirecciona al lugar que indique el id */
   }
 
@@ -24,12 +28,13 @@ function mostrarFactura() {
     
         <td>${item.nombre}</td>
         <td>&cent${item.pre}</td>
-        <td><${item.cantidad}</td>
+        <td>${item.cantidad}</td>
         <td>&cent;${item.subtotal}</td>
-        `;    
+        `;
         tbody.appendChild(row);
     });
-
+    var total = JSON.parse(localStorage.getItem('total')) || [];
+    $('#total').text("₡" + total);
 
 }
 
@@ -45,7 +50,7 @@ const fecha= new Date();
     const fechaFormateada = `${dia}/${mes}/${anio}`;
 
     //insertar la fecha en el HTML
-    document.getElementById('fecha').textContent = `Fecha de la compra: ${fechaFormateada}`;
+    document.getElementById('fecha').textContent = `Fecha: ${fechaFormateada}`;
 
 
 //Mostrar nombre de la persona
@@ -65,4 +70,44 @@ let ultimo = 0;
     //Insertar el número de factura en el html
     document.getElementById('factura').textContent = `#${nuevoNumero}`
 
+// // Recuperar el último número de factura almacenado en localStorage
+// let ultimo = localStorage.getItem('ultimoNumeroFactura');
+
+// // Si no hay un número almacenado, inicializar con 0
+// if (!ultimo) {
+//     ultimo = 0;
+// } else {
+//     ultimo = parseInt(ultimo, 10); // Convertir el valor a número
+// }
+
+// // Incrementar el último número de la factura
+// ultimo += 1;
+
+// // Guardar el nuevo número en el localStorage
+// localStorage.setItem('ultimoNumeroFactura', ultimo);
+
+// // Dar formato al número de factura
+// let nuevoNumero = ultimo.toString().padStart(3, '0');
+
+// // Insertar el número de factura en el HTML
+// document.getElementById('factura').textContent = `#${nuevoNumero}`;
+
+
+//MOSTRAR OPCION DE ENVIO
+const opcionValor = document.getElementById('opcionValor');
+    
+// Al cargar la página, verificar si hay una opción guardada y marcar el radio correspondiente
+const opcionGuardada = localStorage.getItem('opcionEnvio');
+if (opcionGuardada) {
+    const radioGuardado = document.getElementById(opcionGuardada);
+    if (radioGuardado) {
+        radioGuardado.checked = true;
+    }
+    // Mostrar el valor guardado
+    opcionValor.textContent = `Envio: ${opcionGuardada}`;
+}
+
+//MÉTODO DE PAGO
+const tarjeta = localStorage.getItem('tarjeta');
+document.getElementById('metodo').textContent = `Tarjeta: ${tarjeta}`;
 

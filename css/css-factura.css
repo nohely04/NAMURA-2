@@ -1,3 +1,13 @@
 #regresar{
+    background-color: #dd7888;
+    border-color: #dd7888;
+    color: #fff; 
+    box-shadow: none; 
+}
+
+#regresar:hover
+#regresar:active
+#regresar:focus{
+    background-color: #dd7888;
     border-color: #dd7888;
 }

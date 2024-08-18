@@ -3,7 +3,7 @@ $(document).ready(function () {
 });
 
 function mostrarDetalle() {
-    var total = 0;
+    var total=0;
     // Obtener los datos del carrito desde localStorage
     let cartArray = JSON.parse(localStorage.getItem('productos')) || [];
     console.table(cartArray)
@@ -54,7 +54,7 @@ function eliminar(id) {
     // Verificar que el arreglo del carrito exista
     if (cartArray) {
         // Encontrar el índice del producto a eliminar
-        let index = cartArray.findIndex((prod) => prod.productoId === id);
+        let index = cartArray.findIndex((prod) => prod.productoId == id);
         
         // Si se encontró el producto, proceder a mostrar la notificación
         if (index !== -1) {
