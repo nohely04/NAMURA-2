@@ -61,38 +61,38 @@ document.getElementById('nombre').textContent = `Cliente: ${nombre}`;
 
 
 //NUMERO DE FACTURA- SOLO PARA LA SECCIÓN ACTIVA
-let ultimo = 0;
+// let ultimo = 0;
 
-    //Incrementa el último número de la factura
-    ultimo=+1;
+//     //Incrementa el último número de la factura
+//     ultimo=+1;
 
-    //dar formato
-    let nuevoNumero = ultimo.toString().padStart(3, '0');7
+//     //dar formato
+//     let nuevoNumero = ultimo.toString().padStart(3, '0');7
 
-    //Insertar el número de factura en el html
-    document.getElementById('factura').textContent = `#${nuevoNumero}`
+//     //Insertar el número de factura en el html
+//     document.getElementById('factura').textContent = `#${nuevoNumero}`
 
 // // Recuperar el último número de factura almacenado en localStorage
-// let ultimo = localStorage.getItem('ultimoNumeroFactura');
+let ultimo = localStorage.getItem('ultimoNumeroFactura');
 
-// // Si no hay un número almacenado, inicializar con 0
-// if (!ultimo) {
-//     ultimo = 0;
-// } else {
-//     ultimo = parseInt(ultimo, 10); // Convertir el valor a número
-// }
+// Si no hay un número almacenado, inicializar con 0
+ if (!ultimo) {
+     ultimo = 0;
+ } else {
+     ultimo = parseInt(ultimo, 10); // Convertir el valor a número
+ }
 
 // // Incrementar el último número de la factura
-// ultimo += 1;
+ ultimo += 1;
 
 // // Guardar el nuevo número en el localStorage
-// localStorage.setItem('ultimoNumeroFactura', ultimo);
+ localStorage.setItem('ultimoNumeroFactura', ultimo);
 
 // // Dar formato al número de factura
-// let nuevoNumero = ultimo.toString().padStart(3, '0');
+ let nuevoNumero = ultimo.toString().padStart(3, '0');
 
 // // Insertar el número de factura en el HTML
-// document.getElementById('factura').textContent = `#${nuevoNumero}`;
+ document.getElementById('factura').textContent = `#${nuevoNumero}`;
 
 
 //MOSTRAR OPCION DE ENVIO
