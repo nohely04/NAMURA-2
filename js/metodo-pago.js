@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.getElementById('expressOrotina').disabled = true;
                     document.getElementById('express').disabled = true;
                     document.getElementById('tienda').disabled = true;
-                    redireccionar();
+                
                 });
             }
         }
