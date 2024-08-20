@@ -19,9 +19,9 @@ function mostrarDetalle() {
         <td> <button type="button" class="btn eliminar" aria-label="Close" onclick="eliminar(${item.productoId})" > <i class="bi bi-x" id=icon></i></button></td>
         <td><img src="${item.imagen}" alt="imagen" style="width: 100px; height: 100PX; class="img-fluid"></td>
         <td>${item.nombre}</td>
-        <td>&cent${item.pre}</td>
+        <td id="precio">&cent${item.pre}</td>
         <td><input type="number" min="1" id="cajaCant" value="${item.cantidad}" onchange="actializar(this)"  data-id="${item.productoId}"</td>
-        <td>&cent;${item.subtotal}</td>
+        <td id="subtotal">&cent;${item.subtotal}</td>
         `;
         total += item.subtotal;
         tbody.appendChild(row);
@@ -120,6 +120,15 @@ function mostrarNotificacionEliminar(id, index, cartArray) {
             mostrarDetalle();
         } else {
             console.log("Eliminación cancelada");
+            var valor = document.getElementById('cajaCant').value;
+            var numero = parseInt(valor, 10);
+            if(numero>=1){
+                document.getElementById('cajaCant').value = valor ;
+            }else{
+                mostrarDetalle();
+            }
+            
+           
         }
     });
 }

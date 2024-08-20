@@ -42,7 +42,7 @@ document.getElementById('fetchButton').addEventListener('click', function (event
                 document.getElementById('codigoCVV').setAttribute('required', 'required');
             })
             .catch(error => {
-                document.getElementById('result').innerHTML = `<p>Error al cargar los datos: ${error}</p>`;
+                document.getElementById('result').innerHTML = `<p>El número de tarjeta no es válido.</p>`;
             });
     } else {
         alert('El número de tarjeta debe tener exactamente 16 dígitos.');
@@ -98,12 +98,14 @@ document.getElementById('nombreTitular').addEventListener('input', function () {
     }
 });
 
-
+//VALIDA LOS BOTONES DE ENVIO, REALIZA LA SIMULACIÓN DE ENVIO Y HACE QUE NO SALTE EL MENSAJE DE
+//ERROR EN EL BOTON DE REDIRECCIONAR
 document.addEventListener('DOMContentLoaded', function () {
     const formulario = document.getElementById('formulario');
     const radios = document.querySelectorAll('input[name="inlineRadioOptions"]');
     const errorEnvio = document.getElementById('errorEnvio');
     const submitButton = document.getElementById('submitButton');
+    const redireccionarButton = document.getElementById('factu');
 
     // Función de validación
     function validarFormulario() {
@@ -117,39 +119,68 @@ document.addEventListener('DOMContentLoaded', function () {
             return true; // Permite el envío del formulario
         }
     }
-
-    // Escucha el cambio en los radios
-    radios.forEach(radio => {
-        radio.addEventListener('change', function () {
-            validarFormulario();
-        });
-    });
+    function anular(){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Error',
+            text: 'No se puede permitir el pago sin productos agregados',
+            showConfirmButton: false,
+            timer: 2000
+                });
+    }
 
     // Escucha el envío del formulario
     formulario.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevenir el envío por defecto
+        // Prevenir el envío por defecto solo si el botón de pagar fue presionado
+        if (event.submitter === submitButton) {
+            event.preventDefault();
+            let verificar = JSON.parse(localStorage.getItem('productos')) || [];
+            if(verificar.length == 0){
+                anular();
+                limpiarFormulario();
+                limpiarTabla('detalle');
+            }else{
+            // Valida el formulario
+            if (validarFormulario()) {
+                // Si la validación es exitosa, simula el pago
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Pago realizado con éxito!',
+                    text: 'Gracias por tu compra.',
+                    confirmButtonColor: '#dd7888',
+                    timer: 10000,
+                    timerProgressBar: true,
+                    showConfirmButton: true,
+                    confirmButtonText: 'Cerrar'
+                }).then(() => {
+                    // Limpia el formulario
+                    limpiarFormulario();
 
-        // Validar el formulario antes de proceder
-        if (validarFormulario()) {
-            mostrarNotificacionPagoExitoso(); // Mostrar la notificación si la validación es exitosa
+                    // Limpia la tabla 
+                    limpiarTabla('detalle');
+
+                    //Activa el botón de factura
+                    document.getElementById('factu').disabled = false;
+                    //desactiva los botones de envio para que no haya errores
+                    document.getElementById('expressOrotina').disabled = true;
+                    document.getElementById('express').disabled = true;
+                    document.getElementById('tienda').disabled = true;
+                });
+            }
         }
+    }
+    });
+
+    // Evita la validación y el envío del formulario al hacer clic en el botón de redirección
+    redireccionarButton.addEventListener('click', function (event) {
+        event.preventDefault(); // Evita que salte el mensaje de rror
+        redireccionar(); 
     });
 });
 
-// function mostrarNotificacionPagoExitoso() {
-//     Swal.fire({
-//         icon: 'success',
-//         title: '¡Pago realizado con éxito!',
-//         text: 'Gracias por tu compra.',
-//         confirmButtonColor: '#dd7888',
-//         timer: 10000, 
-//         timerProgressBar: true,
-//         showConfirmButton: true,
-//         confirmButtonText: 'Cerrar'
-//     }).then(() => {
-//         limpiarFormulario();
-//     });
-// }
+function redireccionar() {
+    window.location.href = 'factura.html';
+}
 
 // Función para limpiar el formulario
 function limpiarFormulario() {
@@ -181,51 +212,14 @@ function limpiarTabla(idTabla) {
     }
 }
 
-
-// document.getElementById('submitButton').addEventListener('click', function() {
-//     event.preventDefault(); 
-
-//     //Limpia la tabla 
-//     limpiarTabla('detalle');
-
-//     //redirecciona
-//      window.location.href = 'factura.html'; 
-// });
-
-document.getElementById('submitButton').addEventListener('click', function (event) {
-    event.preventDefault();
-
-    // Muestra la notificación de pago exitoso
-    Swal.fire({
-        icon: 'success',
-        title: '¡Pago realizado con éxito!',
-        text: 'Gracias por tu compra.',
-        confirmButtonColor: '#dd7888',
-        timer: 10000,
-        timerProgressBar: true,
-        showConfirmButton: true,
-        confirmButtonText: 'Cerrar'
-    }).then(() => {
-
-        // Limpiar el formulario
-        limpiarFormulario();
-
-        // Limpiar la tabla 'detalle'
-        limpiarTabla('detalle');
-
-        document.getElementById('factu').disabled = false;
-    });
-});
-
-function redireccionar(){
-    window.location.href = 'factura.html';
-}
-
 function obtenerNombre() {
     var nombre = document.getElementById('nombreTitular').value;
     localStorage.setItem('Nombre', nombre);
+    let verifica = parseFloat(localStorage.getItem('productos'));
+    
 
 }
+
 
 //SUMAR EL ENVIO EXPRESS 
 const expre = document.querySelectorAll('input[name="inlineRadioOptions"]');

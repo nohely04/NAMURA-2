@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded',async function() {
                 data: {
                     labels: nombres,
                     datasets: [{
-                        label: 'Ventas en Julio',
+                        label: 'Ventas en Agosto',
                         data: ventasJulio,
                         backgroundColor: [
                             '#fcbfc9',

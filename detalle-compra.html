@@ -63,9 +63,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="acerca-de.html">Acerca de</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="factura.html">Factura</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -144,6 +144,7 @@
                                 <input type="text" id="binInput" class="form-control me-2" placeholder="Ingrese su número de tarjeta" maxlength="16">
                                 <button id="fetchButton" class="btn btn-primary estilo">Validar</button>
                             </div>
+                            <div class="result-container" id="result"></div>
                             <div class="mb-3">
                                 <label for="nombreTitular" class="form-label"><b>Nombre del Titular</b></label>
                                 <input type="text" class="form-control" id="nombreTitular" placeholder="Nombre del titular" disabled>
@@ -159,7 +160,6 @@
                                 <input type="text" class="form-control" id="codigoCVV" placeholder="Ingrese el CVV" maxlength="4" disabled>
                                 <small id="errorCVV" class="mensaje-error" style="display:none;">Por favor, ingrese un CVV válido.</small>
                             </div>
-                            <div class="result-container" id="result"></div>
                             <div class="text-center mt-3">
                                 <button type="submit" class="btn btn-primary estilo" id="submitButton" disabled onclick="obtenerNombre()">Pagar</button>
                                 <button type="submit" class="btn btn-primary estilo" id="factu" disabled onclick="redireccionar()">Ver factura</button>
