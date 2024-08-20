@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     // Limpia la tabla 
                     limpiarTabla('detalle');
-
+                    redireccionar();
                     //Activa el botón de factura
                     document.getElementById('factu').disabled = false;
                     //desactiva los botones de envio para que no haya errores
@@ -215,7 +215,7 @@ function limpiarTabla(idTabla) {
 function obtenerNombre() {
     var nombre = document.getElementById('nombreTitular').value;
     localStorage.setItem('Nombre', nombre);
-    let verifica = parseFloat(localStorage.getItem('productos'));
+    
     
 
 }

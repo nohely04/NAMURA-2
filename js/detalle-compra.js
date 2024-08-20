@@ -116,6 +116,11 @@ function mostrarNotificacionEliminar(id, index, cartArray) {
                 timer: 2000
             });
             
+            //Limpia el formulario(radio botones)
+            const formulario = document.getElementById('formulario');
+            formulario.reset();
+            //limpia el extra a cero
+            $('#extra').text("₡" + 0);
             // Actualizar la interfaz
             mostrarDetalle();
         } else {
