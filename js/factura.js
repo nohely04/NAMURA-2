@@ -60,19 +60,6 @@ const fecha= new Date();
 const nombre = localStorage.getItem('Nombre');
 document.getElementById('nombre').textContent = `Cliente: ${nombre}`;
 
-
-//NUMERO DE FACTURA- SOLO PARA LA SECCIÓN ACTIVA
-// let ultimo = 0;
-
-//     //Incrementa el último número de la factura
-//     ultimo=+1;
-
-//     //dar formato
-//     let nuevoNumero = ultimo.toString().padStart(3, '0');7
-
-//     //Insertar el número de factura en el html
-//     document.getElementById('factura').textContent = `#${nuevoNumero}`
-
 // // Recuperar el último número de factura almacenado en localStorage
 let ultimo = localStorage.getItem('ultimoNumeroFactura');
 

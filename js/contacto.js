@@ -126,7 +126,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!encotrarError) {
-           alert("¡Formulario enviado con exito!")
+        //    alert("¡Formulario enviado con exito!")
+        Swal.fire({
+            icon: 'success',
+            text: '¡Formulario enviado con éxito!',
+            confirmButtonColor: '#dd7888',
+            timer: 2000,
+            timerProgressBar: true,
+            showConfirmButton: true,
+            confirmButtonText: 'Cerrar'
+        }).then(() => {
             nombreInput.value = '';
             emailInput.value = '';
             fechaInput.value = '';
@@ -135,6 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Desmarcar todos los botones de radio
             radioboton.forEach(radio => radio.checked = false);
             document.getElementById('Check').checked = false;
+        });
         } 
     });
 

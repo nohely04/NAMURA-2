@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es ">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,16 @@
     <!--íconos y link de bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.10/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="./css/css-contactos.css">
     <link href="./css/css-principal.css" rel="stylesheet" />
-    
-    
-    
-    
+
+
+
+
 </head>
 
 <body>
@@ -28,22 +31,25 @@
 
     </header>
     <!--Menú-->
-       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menú">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menú">
         <div class="container-fluid">
             <!-- Botón del carrito -->
-            <button type="button" class="btn carrito-button position-relative ms-2 order-2 order-lg-3" onclick="detallCompra()">
+            <button type="button" class="btn carrito-button position-relative ms-2 order-2 order-lg-3"
+                onclick="detallCompra()">
                 <i class="bi bi-cart-plus fs-3"></i>
-                <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                <span
+                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
                     <span class="visually-hidden">Nuevo producto asignado</span>
                 </span>
             </button>
-    
+
             <!-- Botón de colapso del menú -->
-            <button class="navbar-toggler order-1 order-lg-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+            <button class="navbar-toggler order-1 order-lg-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <!-- Menú colapsado -->
             <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -73,14 +79,14 @@
                 <h2 class="titulo text-center">Contacto</h2>
             </article>
         </section>
-    
+
         <div class="row">
             <!-- Formulario -->
             <div class="col-lg-6 col-md-12 mb-4">
                 <section>
                     <article>
                         <form id="formu">
-                            <p id="tit" class="text-center">Suscríbete y déjanos tu opinión</p>
+                            <p id="tit" class="text-center">Déjanos tu opinión</p>
                             <div class="mb-3">
                                 <label for="InputEmail" class="form-label">Correo Electrónico</label>
                                 <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
@@ -89,25 +95,30 @@
                             <div class="mb-3">
                                 <label for="Inputnombre" class="form-label">Nombre Completo</label>
                                 <input type="text" class="form-control" id="Inputnombre" aria-describedby="namelHelp">
-                                <span id="error2" class="error">Este campo es obligatorio y no puede contener números.</span>
+                                <span id="error2" class="error">Este campo es obligatorio y no puede contener
+                                    números.</span>
                             </div>
                             <div class="mb-3">
                                 <label for="InputFecha" class="form-label">Fecha de Nacimiento</label>
                                 <input type="date" class="form-control" id="InputFecha" aria-describedby="datelHelp">
-                                <span id="error3" class="error">La fecha debe corresponder a una edad entre 18 y 100 años.</span>
+                                <span id="error3" class="error">La fecha debe corresponder a una edad entre 18 y 100
+                                    años.</span>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Género</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Masculino">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="Masculino">
                                     <label class="form-check-label" for="inlineRadio1">Masculino</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Femenino">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="Femenino">
                                     <label class="form-check-label" for="inlineRadio2">Femenino</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Otros">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio3" value="Otros">
                                     <label class="form-check-label" for="inlineRadio3">Otros</label>
                                 </div>
                                 <span id="error4" class="error">Seleccione una opción.</span>
@@ -120,7 +131,8 @@
                                 <span id="error5" class="error">Seleccione una opción.</span>
                             </div>
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Deja un comentario aquí" id="inputComentario"></textarea>
+                                <textarea class="form-control" placeholder="Deja un comentario aquí"
+                                    id="inputComentario"></textarea>
                                 <label for="inputComentario">Comentarios</label>
                                 <span id="error6" class="error">Este campo es obligatorio.</span>
                             </div>
@@ -135,7 +147,7 @@
                     </article>
                 </section>
             </div>
-    
+
             <!-- Tarjeta de contacto -->
             <div class="col-lg-6 col-md-12 mb-4 d-flex justify-content-center">
                 <section>
@@ -145,7 +157,8 @@
                                 <p id="tit" class="text-center">Conoce la forma de contactarnos</p>
                                 <h3 class="card-title text-center" id="contacto">Contactos</h3>
                                 <p class="card-text" id="celular"><i class="bi bi-telephone"></i> 6348-8677</p>
-                                <p class="card-text" id="correo"><i class="bi bi-envelope-at"></i> namuracakes.cr@gmail.com</p>
+                                <p class="card-text" id="correo"><i class="bi bi-envelope-at"></i>
+                                    namuracakes.cr@gmail.com</p>
                                 <p class="card-text" id="ubicación"><i class="bi bi-geo-alt"></i> Coyolar, Orotina</p>
                                 <h4 class="card-text" id="Horario">Horario</h4>
                                 <p class="card-text">Lun 9:00am - 5:00pm</p>
@@ -161,16 +174,16 @@
                 </section>
             </div>
         </div>
-    
+
         <!-- Mapa -->
         <div class="row">
             <div id="mapa" class="col-12"></div>
         </div>
     </main>
-    
-    
-    
-    
+
+
+
+
     <footer>
         <div class="iconos-redes">
             <a href="https://www.instagram.com/namura_cakes/" class="bi bi-instagram"></a>
@@ -182,15 +195,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>     
+        crossorigin="anonymous"></script>
 
-        <script src="js/contacto.js"></script>
+    <script src="js/contacto.js"></script>
 
-        <script src="json/productos-detalle.js"></script>
+    <script src="json/productos-detalle.js"></script>
 
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-        <script src="js/mostrar.js"></script>
-        
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.10/dist/sweetalert2.all.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/mostrar.js"></script>
+
 </body>
 
 </html>
