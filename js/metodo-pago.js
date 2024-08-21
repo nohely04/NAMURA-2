@@ -3,8 +3,9 @@ document.getElementById('fetchButton').addEventListener('click', function (event
     event.preventDefault();
 
     const bin = document.getElementById('binInput').value;
+    const regex = /^[0-9]{16}$/;
 
-    if (bin.length === 16) {
+    if (regex.test(bin)) {
         const num = bin.substring(0, 6);
         const url = `https://data.handyapi.com/bin/${num}`;
 
@@ -45,9 +46,17 @@ document.getElementById('fetchButton').addEventListener('click', function (event
                 document.getElementById('result').innerHTML = `<p>El número de tarjeta no es válido.</p>`;
             });
     } else {
-        alert('El número de tarjeta debe tener exactamente 16 dígitos.');
+       // alert('El número de tarjeta debe contener exactamente 16 dígitos numéricos.');
+       Swal.fire({
+        icon: 'warning',
+        title: 'Error',
+        text: 'El número de tarjeta debe contener exactamente 16 dígitos numéricos.',
+        showConfirmButton: false,
+        timer: 2000
+            });
     }
 });
+
 
 document.getElementById('codigoCVV').addEventListener('input', function () {
     const cvv = this.value;
