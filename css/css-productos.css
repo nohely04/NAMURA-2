@@ -1,58 +1,61 @@
-#listaProductos,.mb-3{
-    padding: 50px;
+#listaProductos {
+  padding: 60px 0; 
 }
 
-div img{
-    max-height: 250px;
+.col {
+  display: flex; 
+  justify-content: center; 
 }
 
-.form-select option, label{
-    font-family: 'Montserrat Light';
+.card-img-top {
+  max-height: 200px; 
+  object-fit: cover; 
+  width: 100%; 
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.boton {
+  padding: 0 0 20px 0; /* Ajusta el relleno inferior de los botones */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+header, nav {
+  width: 100%;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  margin: 0; 
 }
 
 .detalle {
-font-family: 'League';
-background-color: #dd7888 !important;
-border: #dd7888 !important;
-max-width: 150px;
-
-}
-.boton{
-    padding: 0px 0px 20px 0px;
-    
+  background-color: #dd7888; 
+  border:#dd7888; 
+  color: white; 
+  font-family: 'League';
+  max-width: 150px; 
+  margin: 0 auto; 
 }
 
 .detalle:hover,
 .detalle:focus,
 .detalle:active {
-    text-decoration: none; 
-    background-color: #dd7888 !important; 
-    color: white;
+  background-color: #dd7888;
+  color: white;
+  text-decoration: none;
 }
-
-
-
-
-.card-title {
-    font-weight: bold; /* Aplica negrita al texto */
-}
-
-
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden; 
-}
-
-header, nav {
-    width: 100%;
-}
-
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.row {
-    margin: 0;
-}
+  
