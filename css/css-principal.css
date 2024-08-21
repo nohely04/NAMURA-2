@@ -134,7 +134,19 @@ footer {
     color: inherit !important;
 }
 
+#regresar{
+    font-family: Montserrat Light;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+ 
+}
 
+#regresar:hover{
+    color: #dd7888;
+}
+
+   
 
 @media(max-width:767.98px){
     header img{

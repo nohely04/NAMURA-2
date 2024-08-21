@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     const url = new URLSearchParams(window.location.search);
     const productoId = url.get("id");
