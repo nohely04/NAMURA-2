@@ -30,13 +30,29 @@ max-width: 150px;
     color: white;
 }
 
-main{
-    margin-left: 20px;
-    padding-left: 20px;
-}
+
+
 
 .card-title {
     font-weight: bold; /* Aplica negrita al texto */
 }
 
 
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+header, nav {
+    width: 100%;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row {
+    margin: 0;
+}

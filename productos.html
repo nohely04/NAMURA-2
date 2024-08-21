@@ -62,22 +62,22 @@
         </div>
     </nav>
 
-    <main>
+    <main class="container text-center ">
         <section>
-            <article>
-                <h2 class="titulo text-center mb-4">Productos</h2>
-                <p id="subtitulo">Conoce nuestro delicioso catálogo lleno de distintas opciones para elegir
-                    como endulzarte la vida.
-                </p>
+            <article class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+                <h2 class="titulo mb-4">Productos</h2>
+                <p id="subtitulo">Conoce nuestro delicioso catálogo lleno de distintas opciones para elegir como endulzarte la vida.</p>
             </article>
         </section>
-        <div class="mb-2 ms-5 w-50 buscador">
+        
+        <div class="mb-2 w-50 mx-auto buscador">
             <label for="filter" class="form-label">Buscar por categoría:</label>
             <select id="filter" class="form-select">
                 <option value="all">Todos</option>
             </select>
         </div>
-        <div id="listaProductos" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        
+        <div id="listaProductos" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
             <div class="col">
                 <div class="card h-100 d-flex flex-column">
                     <img src="img/image-not-found.jpg" class="card-img-top" alt="Imagen" style="object-fit: cover; height: 200px;">
@@ -90,8 +90,10 @@
                     </div>
                 </div>
             </div>
-        </div>           
+        </div> 
+            
     </main>
+    
     
     <footer>
         <div class="iconos-redes">
