@@ -11,3 +11,13 @@
     background-color: #dd7888;
     border-color: #dd7888;
 }
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
+  }
+  
+  header, nav {
+    width: 100%;
+  }
