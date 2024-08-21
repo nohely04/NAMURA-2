@@ -159,8 +159,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Limpia la tabla 
                     limpiarTabla('detalle');
                     
-                    //Activa el botón de factura
-                    document.getElementById('factu').disabled = false;
                     //desactiva los botones de envio para que no haya errores
                     document.getElementById('expressOrotina').disabled = true;
                     document.getElementById('express').disabled = true;
@@ -170,12 +168,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-    });
-
-    // Evita la validación y el envío del formulario al hacer clic en el botón de redirección
-    redireccionarButton.addEventListener('click', function (event) {
-        event.preventDefault(); // Evita que salte el mensaje de rror
-        redireccionar(); 
     });
 });
 

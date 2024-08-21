@@ -8,7 +8,7 @@ function regresar() {
     localStorage.removeItem('Nombre');
     localStorage.removeItem('opcionEnvio');
     window.location.href = 'index.html'; /*redirecciona al lugar que indique el id */
-    // localStorage.removeItem('ultimoNumeroFactura')
+    //localStorage.removeItem('ultimoNumeroFactura')
   }
 
 
