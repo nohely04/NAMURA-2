@@ -15,7 +15,7 @@ const productos = [
       "tamaños": {
         "Grande": "22cm"
       },
-      "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+      "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
       "reseñas_usuarios": [
         {
@@ -43,7 +43,7 @@ const productos = [
    "tamaños": {
         "Mediano": "18cm"
       },
-      "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina. A partir de la compra de más de ₡10 000",
+      "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
       "tiempo_entrega":"De  3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
@@ -71,7 +71,7 @@ const productos = [
     "tamaños": {
         "Mediano": "6 unidades"
       },
-      "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+      "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
@@ -100,7 +100,7 @@ const productos = [
     "tamaños": {
         "Mediano": "6 unidades"
       },
-      "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+      "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
@@ -129,7 +129,7 @@ const productos = [
     "tamaños": {
         "Pequeño": "12 cm",
       },
-      "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+      "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
@@ -158,7 +158,7 @@ const productos = [
     "tamaños": {
         "Pequeño": "12 cm",
       },
-      "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+      "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
@@ -187,7 +187,7 @@ const productos = [
     "tamaños": {
         "Pequeño": "22 cm",
       },
-      "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+      "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
@@ -216,7 +216,7 @@ const productos = [
     "tamaños": {
       "Mediano": "18cm"
     },
-    "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+    "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
     "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
@@ -245,7 +245,7 @@ const productos = [
     "tamaños": {
       "Grande": "22cm"
     },
-    "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+    "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
     "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
@@ -273,7 +273,7 @@ const productos = [
   "tamaños": {
     "Mediano": "18cm"
   },
-  "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+  "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
@@ -302,7 +302,7 @@ const productos = [
   "tamaños": {
     "Mediano": "18cm"
   },
-  "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+  "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
@@ -330,7 +330,7 @@ const productos = [
   "tamaños": {
     "Grande": "22cm"
   },
-  "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+  "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
@@ -358,7 +358,7 @@ const productos = [
   "tamaños": {
     "Grande": "22cm"
   },
-  "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+  "opcion_entrega":"En local, servicio express en Coyolar y en Orotina por un costo adicional de ₡2000.",
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
@@ -386,7 +386,7 @@ const productos = [
   "tamaños": {
     "Pequeño": "12cm"
   },
-  "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+  "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina.",
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
@@ -414,7 +414,7 @@ const productos = [
   "tamaños": {
     "Mediano": "18cm",
   },
-  "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina a partir de la compra de más de ₡10 000",
+  "opcion_entrega":"En local o servicio express alrededor de la zona de Coyolar, Orotina.",
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {

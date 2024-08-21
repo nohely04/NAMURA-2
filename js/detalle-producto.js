@@ -133,11 +133,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const cant = document.getElementById('cantidad');
 
+    cant.addEventListener('input', function() {
+        let cantidad = parseInt(this.value);
 
-
-
-
-
-
-
+        // Valida si la cantidad es menor a 1
+        if (cantidad < 1) {
+            // Si lo es coloca el 1 
+            this.value = 1;
+        }
+    });
+});
