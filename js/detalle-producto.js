@@ -48,21 +48,28 @@ $(document).ready(function(){
     }
 });
 
+
+// Obtener el ID del producto desde la URL
+const url = new URLSearchParams(window.location.search);
+const productoId = parseInt(url.get("id"));
+
+// Buscar el producto correspondiente
+const producto = productos.find(p => p._id === productoId);
+
 // Función para actualizar el estado del "me gusta" en el localStorage
-function actualizarEstadoMeGusta(numeroReseña, estado) {
-    localStorage.setItem(`meGusta-${numeroReseña}`, estado);
+function actualizarEstadoMeGusta(productoId, reseñaId, estado) {
+    localStorage.setItem(`meGusta-${productoId}-${reseñaId}`, estado);
 }
 
 // Función para obtener el estado del "me gusta" desde el localStorage
-function obtenerEstadoMeGusta(numeroReseña) {
-    return localStorage.getItem(`meGusta-${numeroReseña}`);
+function obtenerEstadoMeGusta(productoId, reseñaId) {
+    return localStorage.getItem(`meGusta-${productoId}-${reseñaId}`);
 }
 
 // Función para inicializar el estado del "me gusta" al cargar la página
-function inicializarMeGusta(numeroReseña) {
-    const heartIcon = document.getElementById(`heart-icon-${numeroReseña}`);
-
-    const estado = obtenerEstadoMeGusta(numeroReseña);
+function inicializarMeGusta(productoId, reseñaId) {
+    const heartIcon = document.getElementById(`heart-icon-${reseñaId}`);
+    const estado = obtenerEstadoMeGusta(productoId, reseñaId);
 
     if (estado === 'true') {
         heartIcon.classList.remove('bi-heart');
@@ -76,33 +83,54 @@ function inicializarMeGusta(numeroReseña) {
 }
 
 // Función para dar o quitar "Me Gusta" a una reseña
-function darMeGusta(numeroReseña) {
-    const heartIcon = document.getElementById(`heart-icon-${numeroReseña}`);
-
-    const estado = obtenerEstadoMeGusta(numeroReseña);
+function darMeGusta(productoId, reseñaId) {
+    const heartIcon = document.getElementById(`heart-icon-${reseñaId}`);
+    const estado = obtenerEstadoMeGusta(productoId, reseñaId);
 
     if (estado === 'true') {
         // Quitar "me gusta"
         heartIcon.classList.remove('bi-heart-fill');
         heartIcon.classList.add('bi-heart');
         heartIcon.style.color = 'black';
-        actualizarEstadoMeGusta(numeroReseña, 'false');
+        actualizarEstadoMeGusta(productoId, reseñaId, 'false');
     } else {
         // Dar "me gusta"
         heartIcon.classList.remove('bi-heart');
         heartIcon.classList.add('bi-heart-fill');
         heartIcon.style.color = 'red';
-        actualizarEstadoMeGusta(numeroReseña, 'true');
+        actualizarEstadoMeGusta(productoId, reseñaId, 'true');
     }
 }
 
-// Inicializar el estado de "me gusta" para todas las reseñas al cargar la página
+// Inicializar reseñas y el estado de "me gusta"
 document.addEventListener('DOMContentLoaded', () => {
-    inicializarMeGusta(1);
-    inicializarMeGusta(2);
+    if (producto && producto.reseñas_usuarios) {
+        const reseñasContainer = document.querySelector('.reseñas .row');
+        reseñasContainer.innerHTML = ''; // Limpiar el contenido previo
+
+        producto.reseñas_usuarios.forEach(reseña => {
+            // Crear las tarjetas de reseñas
+            const reseñaCard = document.createElement('div');
+            reseñaCard.classList.add('col-sm-6', 'mb-3', 'mb-sm-0');
+            reseñaCard.innerHTML = `
+                <div class="card" id="cuadros">
+                    <div class="card-body">
+                        <p class="card-text" id="comentario${reseña.id}">${reseña.comentario}</p>
+                        <p class="card-text" id="usuario${reseña.id}">${reseña.usuario}</p>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div>
+                                <i class="bi bi-heart" id="heart-icon-${reseña.id}" onclick="darMeGusta(${productoId}, ${reseña.id})" style="font-size: 24px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            reseñasContainer.appendChild(reseñaCard);
+            inicializarMeGusta(productoId, reseña.id);
+        });
+    }
 });
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('cantidad');
@@ -137,11 +165,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const cant = document.getElementById('cantidad');
 
     cant.addEventListener('input', function() {
+        // Eliminar cualquier carácter que no sea un dígito
+        this.value = this.value.replace(/[^0-9]/g, '');
+
+        // Convertir a número entero
         let cantidad = parseInt(this.value);
 
-        // Valida si la cantidad es menor a 1
-        if (cantidad < 1) {
-            // Si lo es coloca el 1 
+        // Valida si la cantidad es menor a 1 o si es NaN (Not-a-Number)
+        if (isNaN(cantidad) || cantidad < 1) {
+            // Si es NaN o menor que 1, establece el valor en 1
             this.value = 1;
         }
     });

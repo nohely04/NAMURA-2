@@ -4,15 +4,15 @@ $(document).ready(function () {
 
 function mostrarDetalle() {
     var total=0;
-    // Obtener los datos del carrito desde localStorage
+    // Obtiene los datos del carrito desde localStorage
     let cartArray = JSON.parse(localStorage.getItem('productos')) || [];
     console.table(cartArray)
 
-    // Obtener el tbody de la tabla
+    // Obtiene el tbody de la tabla
     const tbody = document.querySelector('#detalle tbody');
     tbody.innerHTML = ''; // Limpiar el contenido existente
 
-    // Recorrer los elementos del carrito y crear filas
+    // Recorre los elementos del carrito y crear filas
     cartArray.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -32,33 +32,20 @@ function mostrarDetalle() {
 
 
 }
-// function eliminar(id) {
 
-//     var cartArray = JSON.parse(localStorage.getItem('productos'))
-//     if (cartArray) {
-//         let index = cartArray.findIndex((prod) => prod.productoId == id);
-//         mostrarNotificacionEliminar(id);
-//         cartArray.splice(index, 1); // Elimina el producto en el índice encontrado
-//     }
-//     //Guardar
-//     localStorage.setItem('productos', JSON.stringify(cartArray))
-//     console.table(cartArray)
-
-//     mostrarDetalle()
-// }
 
 function eliminar(id) {
-    // Obtener el arreglo del carrito del localStorage
+    // Obtiene el arreglo del carrito del localStorage
     var cartArray = JSON.parse(localStorage.getItem('productos'));
 
-    // Verificar que el arreglo del carrito exista
+    // Verifica que el arreglo del carrito exista
     if (cartArray) {
-        // Encontrar el índice del producto a eliminar
+        // Encuenta el índice del producto a eliminar
         let index = cartArray.findIndex((prod) => prod.productoId == id);
         
         // Si se encontró el producto, proceder a mostrar la notificación
         if (index !== -1) {
-            // Mostrar la notificación de confirmación
+            // Muestra la notificación de confirmación
             mostrarNotificacionEliminar(id, index, cartArray);
         } else {
             console.error('Producto no encontrado en el carrito.');

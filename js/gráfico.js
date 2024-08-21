@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded',async function() {
                         },
                         title: {
                             display: true,
-                            text: 'Ventas de Julio de los Pasteles Más Creativos',
+                            text: 'Venta de los pasteles más creativos en el mes. ',
                                 font: {
                                     size: 20, 
                                     family: 'Montserrat Light', 

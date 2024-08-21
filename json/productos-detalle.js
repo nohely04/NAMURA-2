@@ -19,10 +19,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
       "reseñas_usuarios": [
         {
+          "id":1,
           "usuario": "Ian Morales",
           "comentario": "El pastel estaba delicioso y llegó a tiempo. ¡Muy recomendado!"
         },
         {
+          "id":2,
           "usuario": "Ana Martínez",
           "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de melocotones."
         }
@@ -47,10 +49,12 @@ const productos = [
       "tiempo_entrega":"De  3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
+        "id":3,
         "usuario": "Sherlyn Vargas",
         "comentario": "El pastel estaba muy rico, me encantó! Justo en el punto de sabor.  "
       },
       {
+        "id":4,
         "usuario": "Alejandra Barquero",
         "comentario": "Muy bueno, aunque me gustaría que tuviera un poco más de chocolate encima."
       }
@@ -75,10 +79,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
+        "id":5,
         "usuario": "Luis Herrera",
         "comentario": "Los pedí para la fiesta de mi hijo y a mis invitados le encantaron. Definitivamente un 10."
       },
       {
+        "id":6,
         "usuario": "Julia Serrano",
         "comentario": "Muy buenos, aunque me gustaría que tuvieran más relleno de dulce de leche."
       }
@@ -104,10 +110,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
+        "id":7,
         "usuario": "Jimena Fernández",
         "comentario": "Los pedí para la graduación de mi mejor amiga y le encantaron. ¡Súper recomendados!"
       },
       {
+        "id":8,
         "usuario": "David Solano",
         "comentario": "¡Deliciosos!"
       }
@@ -133,10 +141,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
+        "id":9,
         "usuario": "Naomy Venegas",
         "comentario": "El queque un 10, como siempre. El servicio express llegó justo a tiempo."
       },
       {
+        "id":10,
         "usuario": "Julio López",
         "comentario": "Lo compré para una reunión con mis amigos, y es pequeño apenas como para 6 personas."
       }
@@ -162,10 +172,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
+        "id":11,
         "usuario": "Sofia Guevara",
         "comentario": "Muy delicado y delicioso."
       },
       {
+        "id":12,
         "usuario": "Pablo Sánchez",
         "comentario": "A mi novia le encantó, ¡Súper lindo!"
       }
@@ -191,10 +203,12 @@ const productos = [
       "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
+        "id":13,
         "usuario": "Fabiana Torres",
         "comentario": "El pan estaba muy esponjoso y tenía un sabor delicioso."
       },
       {
+        "id":14,
         "usuario": "Mario Morales",
         "comentario": "Le faltaba más relleno pero después de ahí no tengo quejas. "
       }
@@ -220,11 +234,12 @@ const productos = [
     "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
+        "id":15,
         "usuario": "Verónica Vargas",
-        "valoracion": 5,
         "comentario": "El pastel que pedí llegó justo como lo deseaba. ¡Excelentes productos!"
       },
       {
+        "id":16,
         "usuario": "Jimena Matamorros",
         "comentario": "Aún no puedo superar lo lindo y lo detallado que estaba, ¡Muchas gracias."
       }
@@ -249,10 +264,12 @@ const productos = [
     "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
     "reseñas_usuarios": [
       {
+        "id":17,
         "usuario": "Karen Montero",
         "comentario": "Lo pedí para el baby shower de mi hija, nos encantó."
       },
       {
+        "id":18,
         "usuario": "Fabián Quesada",
         "comentario": "A mi esposa le encantó para nuestro hijo, quedó super satisfecha con el pastel."
       }
@@ -277,10 +294,12 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
+      "id":19,
       "usuario": "Melanie Arias",
       "comentario": "¡Sigo impactada con el resultado! Estaba delicioso."
     },
     {
+      "id":20,
       "usuario": "Ana Martínez",
       "valoracion": 4,
       "comentario": "Se nota que cuando se hacen las cosas con amor, y este definitivamente es la descripción de esa frase."
@@ -306,10 +325,12 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
+      "id":21,
       "usuario": "Liliana Portela",
       "comentario": "Delicioso, apenas para ser el postre de una reunión."
     },
     {
+      "id":22,
       "usuario": "Marco Salas",
       "comentario": "Le hizo falta ser más húmedo, pero estaba rico."
     }
@@ -334,10 +355,12 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
+      "id":23,
       "usuario": "Raúl Gutierrez",
       "comentario": "Nunca había probado un Selva Negra, tan rico. ¡Felicidades!"
     },
     {
+      "id":24,
       "usuario": "Brenda Mora",
       "comentario": "Simplemente ¡Wow!"
     }
@@ -362,10 +385,12 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
+      "id":25,
       "usuario": "Martha Sandí",
       "comentario": "Le encantó a mi hija, gracias."
     },
     {
+      "id":26,
       "usuario": "Rocio Naranjo",
       "comentario": "Me hubiera gustado que tuviera más mariposas."
     }
@@ -390,10 +415,12 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
+      "id":27,
       "usuario": "Angie Castro",
       "comentario": "Lo pedí para mi cumpleaños, quedé fascinada."
     },
     {
+      "id":28,
       "usuario": "Carolina Ulloa",
       "comentario": "¡Me encantó!."
     }
@@ -418,10 +445,12 @@ const productos = [
   "tiempo_entrega":"De 3 a 5 días después de realizar su pedido",
   "reseñas_usuarios": [
     {
+      "id":29,
       "usuario": "Fernanda Herrera",
       "comentario": "¡Súper chic!"
     },
     {
+      "id":30,
       "usuario": "Debóra Valverde",
       "comentario": "¡Lo quiero!."
     }
